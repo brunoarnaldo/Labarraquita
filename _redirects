@@ -1,0 +1,21 @@
+# Redirecciones permanentes (301) para que Google consolide una sola URL por página.
+# Cloudflare por defecto redirige /index.html y las rutas sin barra final con 307
+# (temporal); acá se fuerzan como 301 (permanente).
+# Sintaxis: https://developers.cloudflare.com/workers/static-assets/redirects/
+
+# Rutas fijas primero (más rápido de evaluar)
+/index.html / 301
+/catalogo /catalogo/ 301
+/guias /guias/ 301
+/preguntas-frecuentes /preguntas-frecuentes/ 301
+
+# /index.html -> carpeta con barra final
+/:a/index.html /:a/ 301
+/:a/:b/index.html /:a/:b/ 301
+/:a/:b/:c/index.html /:a/:b/:c/ 301
+
+# Sin barra final -> con barra final (solo secciones con páginas, no assets)
+/catalogo/:cat /catalogo/:cat/ 301
+/catalogo/:cat/:prod /catalogo/:cat/:prod/ 301
+/marcas/:marca /marcas/:marca/ 301
+/guias/:guia /guias/:guia/ 301

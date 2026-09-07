@@ -228,7 +228,7 @@ ${o.body}
     <div>
       <h4>Marcas</h4>
       <ul>
-        ${marcas.slice(0, 8).map(function(m){
+        ${marcas.map(function(m){
           return `<li><a href="${m.url}">${esc(m.nombre)}</a></li>`;
         }).join("\n        ")}
       </ul>
@@ -702,6 +702,21 @@ window.LB_RUTAS = ${JSON.stringify(mapa)};
 window.LB_CATS = ${JSON.stringify(cats)};
 `;
   write("js/rutas.js", js);
+}
+
+/* ── 10b. Enlaces a marcas en el home (entre marcadores) ─────────── */
+{
+  const idx = path.join(ROOT, "index.html");
+  let html = fs.readFileSync(idx, "utf8");
+  const nl = html.includes("\r\n") ? "\r\n" : "\n";   // index.html usa CRLF
+  const re = /(<!-- marcas:start -->)[\s\S]*?(<!-- marcas:end -->)/;
+  if (re.test(html)) {
+    const lis = marcas.map(function(m){ return "        <li><a href=\"" + m.url + "\">" + esc(m.nombre) + "</a></li>"; }).join(nl);
+    html = html.replace(re, function(_, a, b){ return a + nl + lis + nl + "        " + b; });
+    fs.writeFileSync(idx, html);
+  } else {
+    console.warn("index.html: no se encontraron los marcadores <!-- marcas:start/end -->");
+  }
 }
 
 /* ── 11. Resumen ──────────────────────────────────────────────────── */
