@@ -176,13 +176,13 @@ a.slide{display:block;cursor:pointer;-webkit-tap-highlight-color:transparent}
 }
 a.slide:focus-visible{outline:none}
 a.slide:focus-visible .slide-in{outline:3px solid var(--wa);outline-offset:-3px}
-/* El alto sale del propio recuadro: 4:5 exacto, igual que las fotos de oferta.
-   Así encastran sin bandas. Las que no son 4:5 se rellenan con el fondo difuminado. */
+/* El alto sale del propio recuadro: 3:4 exacto, igual que las fotos de oferta.
+   Así encastran sin bandas. Las que no son 3:4 se rellenan con el fondo difuminado. */
 .slide-in{
-  position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;border-radius:16px;
+  position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;border-radius:16px;
   background:var(--surface);box-shadow:0 12px 30px -20px rgba(92,27,38,.5);
 }
-/* Relleno difuminado con la misma foto (evita bandas vacías en fotos que no son 4:5) */
+/* Relleno difuminado con la misma foto (evita bandas vacías en fotos que no son 3:4) */
 .slide-in::before{content:"";position:absolute;inset:0;background:var(--bg) center/cover no-repeat;filter:blur(22px) brightness(.92);transform:scale(1.18);z-index:0}
 .slide-in img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;display:block;transition:transform .35s ease}
 .dots{display:flex;gap:9px;justify-content:center;margin-top:16px}
@@ -526,7 +526,7 @@ footer{margin-top:72px;background:var(--ink);color:#BFB3A6;border-top:3px solid 
 }
 
 @media (max-width:860px){
-  /* el alto lo define .slide-in (4:5) */
+  /* el alto lo define .slide-in (3:4) */
   .slide{flex-basis:50%;padding:0 7px}
   .hdr-search{order:3;flex-basis:100%;max-width:none}
   .top-row{flex-wrap:wrap;gap:12px}
@@ -571,7 +571,7 @@ footer{margin-top:72px;background:var(--ink);color:#BFB3A6;border-top:3px solid 
   .hero{padding:22px 0 16px}
   .hero-title h2{font-size:1.35rem}
   .hero-title span{display:none}
-  /* el alto lo define .slide-in (4:5) */
+  /* el alto lo define .slide-in (3:4) */
   .slide{flex-basis:100%;padding:0 5px}
   .car-nav{width:38px;height:38px}
   .car-hint{font-size:.76rem;gap:7px;padding:8px 14px;margin-top:14px}

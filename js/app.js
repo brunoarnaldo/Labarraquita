@@ -4,7 +4,7 @@
   var WA = "59892109806";
   /* ── Ofertas del mes ──
      Cada oferta es un slide del carrusel y se toca para pedirla por WhatsApp.
-     Para cambiar las promos del mes: reemplazar las imágenes (4:5) y el texto de "msg". */
+     Para cambiar las promos del mes: reemplazar las imágenes (3:4, 1200 × 1600) y el texto de "msg". */
   var OFERTAS = [
     {
       img: "img/ofertas/nhock-premium-25-10.jpg",
@@ -661,7 +661,7 @@
       s.target = "_blank"; s.rel = "noopener";
       s.setAttribute("aria-label", "Pedir por WhatsApp: " + o.alt);
       var inner = document.createElement("div"); inner.className = "slide-in";
-      // Fondo difuminado con la misma foto para rellenar las bandas (imágenes que no son 4:5).
+      // Fondo difuminado con la misma foto para rellenar las bandas (imágenes que no son 3:4).
       // URL absoluta: el var() se consume en el CSS (carpeta css/), una ruta relativa se resolvería mal.
       var bgUrl = new URL(o.img, document.baseURI).href;
       inner.style.setProperty("--bg", 'url("' + bgUrl.replace(/"/g, "%22") + '")');
