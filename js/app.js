@@ -7,39 +7,34 @@
      Para cambiar las promos del mes: reemplazar las imágenes (4:5) y el texto de "msg". */
   var OFERTAS = [
     {
-      img: "img/ofertas/criolla-combo-xl-35kg.jpg",
-      alt: "Volvió el combo XL de Criolla: 25 kg + 10 kg = 35 kg a $ 1550",
-      msg: "Combo XL de Criolla para perros adultos — 25 kg + 10 kg (35 kg) por $ 1550"
+      img: "img/ofertas/nhock-premium-25-10.jpg",
+      alt: "Nhock Premium para perros adultos: 25 kg + 10 kg a $ 1855",
+      msg: "Nhock Premium perros adultos — 25 kg + 10 kg por $ 1855"
     },
     {
-      img: "img/ofertas/combo-connie-22-8.jpg",
-      alt: "Combo Connie para perros adultos: 22 kg + 8 kg a $ 1880",
-      msg: "Combo Connie perros adultos — 22 kg + 8 kg por $ 1880"
+      img: "img/ofertas/combo-oriunda-20-2-7.jpg",
+      alt: "Combo Oriunda para perros adultos: 20 kg + 2 kg de regalo + 7 kg a $ 1205",
+      msg: "Combo Oriunda perros adultos — 20 kg + 2 kg de regalo + 7 kg por $ 1205"
     },
     {
-      img: "img/ofertas/astro-selection-14-3.jpg",
-      alt: "Astro Selection para perros adultos: 14 kg + 3 kg a $ 2135",
-      msg: "Astro Selection perros adultos — 14 kg + 3 kg por $ 2135"
+      img: "img/ofertas/bravo-baby-10-1.jpg",
+      alt: "Bravo Baby leche y cereales: 10 kg + 1 kg de regalo a $ 1200",
+      msg: "Bravo Baby leche y cereales — 10 kg + 1 kg de regalo por $ 1200"
     },
     {
-      img: "img/ofertas/gran-plus-cordero-colchoneta.jpg",
-      alt: "Gran Plus saborizada de cordero: 15 kg + 1,5 kg y colchoneta de regalo",
-      msg: "Gran Plus Gourmet saborizada de cordero — 15 kg + 1,5 kg con colchoneta de regalo"
+      img: "img/ofertas/le-roy-gatos-castrados-10-1.jpg",
+      alt: "Le Roy Grillé de Carnes para gatos castrados: 10,1 kg + 1 kg de regalo a $ 1255",
+      msg: "Le Roy Premium Grillé de Carnes gatos castrados — 10,1 kg + 1 kg de regalo por $ 1255"
     },
     {
-      img: "img/ofertas/le-roy-gatos-1250.jpg",
-      alt: "Le Roy Premium para gatos adultos, 10,1 kg: ofertón $ 1250",
-      msg: "Le Roy Premium Cocktail do Mar gatos adultos — 10,1 kg por $ 1250"
+      img: "img/ofertas/le-roy-gatos-castrados-20kg.jpg",
+      alt: "Ofertón Le Roy Grillé de Carnes para gatos castrados: 20 kg a $ 2288",
+      msg: "Le Roy Premium Grillé de Carnes gatos castrados — 20 kg por $ 2288"
     },
     {
-      img: "img/ofertas/criolla-gatos-pack-xl.jpg",
-      alt: "Pack XL de Criolla para gatos: pagás 7 kg y te llevás 10 kg a $ 620",
-      msg: "Pack XL de Criolla para gatos — pagás 7 kg y te llevás 10 kg por $ 620"
-    },
-    {
-      img: "img/ofertas/astro-selection-beneficios.jpg",
-      alt: "Astro Selection: 23 % de proteína, salud oral, piel y pelaje saludables",
-      msg: "Astro Selection perros adultos — 14 kg + 3 kg"
+      img: "img/ofertas/oriunda-7kg-comerciantes.jpg",
+      alt: "Oriunda Adultos 7 kg para comerciantes: llevando 5 bolsas, $ 270 cada una",
+      msg: "Oriunda Adultos 7 kg — 5 bolsas a $ 270 cada una (precio comerciantes)"
     },
     {
       img: "img/ofertas/100-nutricion.jpg",
