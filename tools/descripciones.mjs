@@ -25,6 +25,8 @@ export default {
   g16: "Piedra sanitaria de alta absorción que controla olores por más tiempo.",
   g17: "Piedra sanitaria absorbente en presentación chica, ideal para probar o para un solo gato.",
   g18: "Piedra sanitaria absorbente en bolsa grande de 6 kg, rinde más y reduce el olor de la bandeja.",
+  g19: "Ración premium de PremieRpet para gatos castrados, sabor pollo, con ingredientes naturales y cuidado del tracto urinario.",
+  g20: "Ración súper premium para gatos castrados de 6 meses a 6 años que viven en ambientes internos, sabor pollo.",
 
   /* ── Perros ── */
   p01: "Ración para perros adultos de todas las razas, alimento completo y balanceado para el día a día.",
@@ -76,6 +78,10 @@ export default {
   p47: "Ración para perros adultos, alimento balanceado nacional en bolsa de 22 kg.",
   p48: "Ración para perros adultos de todas las razas, en bolsa de 16 kg + 2 kg de regalo.",
   p49: "Ración económica para perros adultos en bolsa de 25 kg, la opción más rendidora.",
+  p50: "Ración premium de PremieRpet para perros adultos, sabor pollo y carne, con ingredientes naturales y balde de regalo.",
+  p51: "Ración premium para perros adultos de 7 años o más, sabor pollo, arroz y vegetales, con cuidado oral y articular, con balde de regalo.",
+  p52: "Ración argentina para perros adultos de razas medianas y grandes, con 21 % de proteínas, omega 3, 6 y 9, vitaminas y minerales.",
+  p53: "Ración de alto rendimiento para perros adultos, con 23 % de proteínas, omega 3, 6 y 9 y protección inmunológica.",
 
   /* ── Granja ── */
   f01: "Ración granulada para gallinas ponedoras en su primera fase de postura, formulada para sostener la producción de huevos.",

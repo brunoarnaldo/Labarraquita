@@ -17,6 +17,12 @@ import { fileURLToPath } from "node:url";
 import DESCRIPCIONES from "./descripciones.mjs";
 import FAQ from "./faq.mjs";
 import GUIAS from "./guias.mjs";
+import FICHAS from "./fichas.mjs";
+import {
+  bloquePrecio, bloqueRacion, bloqueFichaTecnica, bloqueComparativa,
+  faqProducto, bloqueFaq, precioUnitario, parsePres,
+  bloqueVariantes, familiaDe
+} from "./contenido.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://labarraquita.com.uy";
@@ -80,6 +86,8 @@ const MARCAS = [
     desc:"Hiport Dog es una ración para perros adultos de todas las razas, alimento completo y balanceado, en bolsas de 7 y 20 kg." },
   { nombre:"Macanudo", re:/^macanudo\b/i,
     desc:"Macanudo es una ración económica para perros y gatos adultos, en bolsas chicas de 5 y 7 kg, práctica para un solo animal." },
+  { nombre:"Golden", re:/^golden\b/i,
+    desc:"Golden es la línea de PremieRpet, con fórmulas de ingredientes naturales para perros adultos (Special), perros de 7 años o más (Senior) y gatos castrados. Es una ración premium brasileña de croqueta bien aceptada, que en las presentaciones grandes suele venir con balde de regalo." },
   { nombre:"Simparica", re:/^simparica\b/i,
     desc:"Simparica Trio es el antiparasitario mensual de Zoetis en comprimido masticable: protege contra pulgas, garrapatas, gusano del corazón y parásitos intestinales en una sola toma. Viene en cuatro presentaciones según el peso del perro, de 5 a 60 kg. Consultá con tu veterinario la dosis correcta." }
 ];
@@ -137,6 +145,34 @@ const items = PRODUCTS.map(function(p){
 });
 const porCat = {};
 items.forEach(function(it){ (porCat[it.cat] = porCat[it.cat] || []).push(it); });
+
+/* Ficha técnica por SKU: fichas.mjs se indexa por fórmula, acá se expande
+   a cada bolsa que la comparte. */
+const fichaDe = {};
+Object.values(FICHAS).forEach(function(f){
+  f.ids.forEach(function(id){ fichaDe[id] = f; });
+});
+
+/* Presentaciones hermanas: mismo producto, distinta bolsa. Se agrupan por
+   nombre + categoría, que es lo que distingue una fórmula en el catálogo. */
+const porLinea = {};
+items.forEach(function(it){
+  const k = it.cat + "|" + it.name.toLowerCase();
+  (porLinea[k] = porLinea[k] || []).push(it);
+});
+function hermanosDe(it){
+  return (porLinea[it.cat + "|" + it.name.toLowerCase()] || [])
+    .filter(function(o){ return o.id !== it.id; });
+}
+
+/* Familias dosificadas por peso del animal (antiparasitarios). */
+const porFamilia = {};
+items.forEach(function(it){
+  if(it.cat !== "cuidado") return;
+  const base = familiaDe(it.name);
+  if(base === it.name) return;              // sin franja entre paréntesis
+  (porFamilia[base] = porFamilia[base] || []).push(it);
+});
 
 const marcas = MARCAS.map(function(m){
   const lista = items.filter(function(it){ return it.marca === m.nombre; });
@@ -268,6 +304,18 @@ function breadcrumbLD(crumbs){
   };
 }
 
+/* Las respuestas son las mismas que se ven en la página: el bloque de FAQ y
+   este marcado salen del mismo array de preguntas. */
+function faqLD(preguntas){
+  if(!preguntas || !preguntas.length) return null;
+  return {
+    "@type": "FAQPage",
+    "mainEntity": preguntas.map(function(p){
+      return { "@type":"Question", "name": p.q, "acceptedAnswer": { "@type":"Answer", "text": p.a } };
+    })
+  };
+}
+
 /* Tarjeta de producto reutilizable en índices */
 function card(it){
   return `<li class="card">
@@ -291,6 +339,19 @@ items.forEach(function(it){
   ];
   const pedido = `Hola La Barraquita! Quiero pedir: ${it.name}${it.pres ? " (" + it.pres + ")" : ""}. ¿Está disponible?`;
   const relacionados = porCat[it.cat].filter(function(o){ return o.id !== it.id; }).slice(0, 8);
+
+  /* Contenido propio de esta ficha: precio por kilo, rendimiento, análisis
+     garantizado y preguntas, todo derivado de los datos del producto. */
+  const ficha = fichaDe[it.id];
+  const hermanos = hermanosDe(it);
+  const preguntas = faqProducto(it, ficha, hermanos);
+  const htmlPrecio = bloquePrecio(it, hermanos);
+  const htmlRacion = bloqueRacion(it, ficha);
+  const htmlTecnica = bloqueFichaTecnica(ficha);
+  const htmlComparativa = bloqueComparativa(it, porCat[it.cat], it.cat_label);
+  const htmlFaq = bloqueFaq(preguntas, it.name);
+  const familia = porFamilia[familiaDe(it.name)];
+  const htmlVariantes = familia && familia.length > 1 ? bloqueVariantes(it, familia) : "";
 
   const desc = `${it.name}${it.pres ? " de " + it.pres : ""} — ${it.precio} en La Barraquita, Minas (Lavalleja). ${it.desc || it.tipo + "."} Envío en el día a todo el país. WhatsApp ${TEL_WA}.`;
 
@@ -317,6 +378,30 @@ items.forEach(function(it){
   if(it.img) producto.image = SITE + it.img;
   if(it.marca) producto.brand = { "@type":"Brand", "name": it.marca };
 
+  /* Peso neto y análisis garantizado como propiedades del producto, para que
+     Google entienda la ficha y no solo el precio. */
+  const presParsed = parsePres(it.pres);
+  if(presParsed.tipo === "peso"){
+    producto.weight = { "@type":"QuantitativeValue", "value": presParsed.kg, "unitCode":"KGM" };
+  }
+  if(ficha?.analisis){
+    const etiquetas = {
+      proteina:"Proteína cruda (mín.)", grasa:"Grasa (mín.)", fibra:"Fibra cruda (máx.)",
+      humedad:"Humedad (máx.)", cenizas:"Cenizas (máx.)", calcio:"Calcio", fosforo:"Fósforo",
+      em:"Energía metabolizable"
+    };
+    producto.additionalProperty = Object.keys(etiquetas)
+      .filter(function(k){ return ficha.analisis[k] !== undefined && ficha.analisis[k] !== null; })
+      .map(function(k){
+        return {
+          "@type": "PropertyValue",
+          "name": etiquetas[k],
+          "value": String(ficha.analisis[k]).replace(".", ","),
+          "unitText": k === "em" ? "kcal/kg" : "%"
+        };
+      });
+  }
+
   const body = `
 <article class="ficha wrap">
   <div class="ficha-art">
@@ -336,20 +421,18 @@ items.forEach(function(it){
       <li>Venta por mayor y por menor</li>
       <li>Efectivo, transferencias y todas las tarjetas</li>
     </ul>
+    ${htmlComparativa}
   </div>
 </article>
-
+${htmlPrecio}
+${htmlRacion}
+${htmlVariantes}
+${htmlTecnica}
+${htmlFaq}
 <section class="wrap bloque">
-  <h2 class="display">Sobre ${esc(it.name)}</h2>
-  <p>${esc(it.tipo)}${it.pres ? ` en presentación de <b>${esc(it.pres)}</b>` : ""}. Lo conseguís en <b>La Barraquita</b>, en Intendente Lois 523, Minas (Lavalleja), o te lo llevamos a tu casa o tu comercio en menos de 24 horas con nuestra flota propia, en Minas y en todo el Uruguay.</p>
-  <p>Somos un negocio familiar desde 2002 y los <b>únicos avalados por el MGAP</b> en la zona. Vendemos <b>por mayor y por menor</b>: si necesitás cantidad, escribinos y te pasamos la lista mayorista.</p>
-  <h3>Cómo comprar</h3>
-  <ol class="pasos">
-    <li>Escribinos por WhatsApp al <b>${TEL_WA}</b> con el producto y la cantidad.</li>
-    <li>Te confirmamos stock, precio del día y forma de pago.</li>
-    <li>Retirás en el local o coordinamos el envío con flota propia.</li>
-  </ol>
-  <p><a class="link-mas" href="/preguntas-frecuentes/">Ver todas las preguntas frecuentes →</a></p>
+  <h2 class="display">Dónde comprar ${esc(it.name)} en Minas</h2>
+  <p>${esc(it.tipo)}${it.pres ? ` en presentación de <b>${esc(it.pres)}</b>` : ""}. Lo retirás en <b>Intendente Lois 523, Minas (Lavalleja)</b> o te lo llevamos con flota propia en menos de 24 horas, a Minas y a todo el país. Pedidos por WhatsApp al <b>${TEL_WA}</b>.</p>
+  <p><a class="link-mas" href="/preguntas-frecuentes/">Cómo comprar, envíos y formas de pago →</a></p>
 </section>
 
 ${relacionados.length ? `<section class="wrap bloque">
@@ -369,7 +452,7 @@ ${relacionados.length ? `<section class="wrap bloque">
     image: it.img || "/img/og-cover.jpg",
     ogType: "product",
     crumbs: crumbs,
-    jsonld: { "@context":"https://schema.org", "@graph":[ producto, breadcrumbLD(crumbs) ] },
+    jsonld: { "@context":"https://schema.org", "@graph":[ producto, faqLD(preguntas), breadcrumbLD(crumbs) ].filter(Boolean) },
     body: body
   }));
 });

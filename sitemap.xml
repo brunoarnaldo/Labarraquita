@@ -3,903 +3,951 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://labarraquita.com.uy/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/og-cover.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granos/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/sanidad/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/harinas/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/astro/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/bravo/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/frost/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/criolla/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/connie/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/equilibrio/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/le-roy/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/prot/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/famil-premium/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/atacama/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/nhock/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/oriunda/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/hiport-dog/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/macanudo/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://labarraquita.com.uy/marcas/golden/</loc>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/marcas/simparica/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/guias/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/guias/cuanta-racion-darle-a-un-perro-por-dia/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/guias/que-racion-elegir-adulto-cachorro-senior-light/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/guias/alimentacion-gallinas-ponedoras/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/guias/harina-000-vs-0000-cual-usar/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/preguntas-frecuentes/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/atacama-castrados-10-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/atacama-castrados.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/frost-castrados-7-5-kg-mas-1-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/frost-castrados.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/famil-premium-gatos-10-kg-mas-1-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/famil-premium-gatos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/le-roy-premium-10-1-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/le-roy-premium-gato.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/le-roy-premium-carne-10-1-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/le-roy-premium-carne.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/le-roy-premium-10-1-kg-mas-1-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/le-roy-premium.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/hiprot-cat-premium-5-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/hiprot-cat-premium.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/macanudo-cat-5-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/macanudo-cat.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/connie-gatos-9-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/connie-gatos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/prot-gatos-8-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/prot-gatos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/criolla-gatos-7-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/criolla-gatos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/equilibrio-gatos-7-kg-mas-750-g/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/equilibrio-gatos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/monkcat-piedra-sanitaria-4-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/monkcat-piedra-sanitaria.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/stonecat-piedra-sanitaria-4-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/stonecat-piedra-sanitaria.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/connie-piedra-sanitaria-3-8-l/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/connie-piedra-sanitaria.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/trigato-piedra-sanitaria-2-5-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/trigato-piedra-sanitaria.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/the-best-piedra-sanitaria-1-8-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/the-best-piedra-sanitaria.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/gatos/sepicat-piedra-sanitaria-6-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/sepicat-piedra-sanitaria.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://labarraquita.com.uy/catalogo/gatos/golden-gatos-castrados-10-1-kg/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://labarraquita.com.uy/img/web/golden-gatos-castrados.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://labarraquita.com.uy/catalogo/gatos/premier-gatos-castrados-7-5-kg/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://labarraquita.com.uy/img/web/premier-gatos-castrados.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/connie-adultos-8-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/connie-adultos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/connie-adultos-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/connie-adultos-25kg.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/prot-adultos-8-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/prot-adultos-8kg.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/prot-adultos-20-kg-mas-3-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/prot-adultos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/criolla-adultos-7-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/criolla-adultos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/criolla-adultos-25-kg-mas-7-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/criolla-adultos-p06.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/criolla-cachorros-7-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/criolla-cachorros.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/old-prince-adulto-15-kg-mas-3-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/old-prince-adulto.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/nhock-premium-15-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/nhock-premium.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/nhock-premium-25-kg-mas-10-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/nhock-premium-p10.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/atacama-adultos-20-kg-mas-2-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/atacama-adultos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/macanudo-7-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/macanudo.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/astro-razas-pequenas-7-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/astro-razas-pequenas.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/astro-razas-pequenas-14-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/astro-razas-pequenas-p14.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/astro-senior-7-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/astro-senior.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/astro-senior-14-kg-mas-2-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/astro-senior-p16.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/astro-adultos-14-kg-mas-3-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/astro-adultos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/falucho-7-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/falucho.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/oriunda-adultos-7-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/oriunda-adultos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/oriunda-adultos-20-kg-mas-2-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/oriunda-adultos-p20.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/bandidos-7-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/bandido-s.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/fridy-7-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/fridy.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/hiport-dog-adultos-7-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/hiport-dog-adultos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/hiport-dog-adultos-20-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/hiport-dog-adultos-p24.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/bravo-light-10-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/bravo-light.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/bravo-light-15-kg-mas-2-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/bravo-light-p26.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/bravo-baby-10-kg-mas-1-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/bravo-baby.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/bravo-baby-15-kg-mas-2-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/bravo-baby-p28.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/bravo-razas-pequenas-10-kg-mas-1-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/bravo-razas-pequenas.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/bravo-original-15-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/bravo-original.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/famil-premium-perros-15-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/famil-premium-perros.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/nero-original-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/nero-original.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/frost-light-razas-pequenas-10-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/frost-light-razas-pequenas.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/frost-razas-pequenas-15-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/frost-razas-pequenas.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/frost-razas-pequenas-10-1-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/frost-razas-pequenas-p35.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/frost-razas-grandes-15-kg-mas-2-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/frost-razas-grandes.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/frost-cachorros-15-kg-mas-2-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/frost-cachorros.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/pedigree-adulto-21-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/pedigree-adulto.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/gran-plus-15-kg-mas-1-5-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/gran-plus.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/equilibrio-razas-pequenas-7-5-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/equilibrio-razas-pequenas.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/equilibrio-razas-medianas-15-kg-mas-3-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/equilibrio-razas-medianas.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/equilibrio-razas-medianas-15-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/equilibrio-razas-medianas-p42.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/natural-dog-22-kg-mas-2-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/natural-dog.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/lager-adultos-22-kg-mas-10-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/lager-adultos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/primocao-22-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/primocao.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/dogui-adultos-21-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/dogui-adultos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/charrua-adultos-22-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/charrua-adultos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/the-golden-choice-16-kg-mas-2-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/the-golden-choice.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/rex-adultos-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/rex-adultos.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://labarraquita.com.uy/catalogo/perros/golden-special-adultos-20-kg/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://labarraquita.com.uy/img/web/golden-special-adultos.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://labarraquita.com.uy/catalogo/perros/golden-senior-15-kg/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://labarraquita.com.uy/img/web/golden-senior.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://labarraquita.com.uy/catalogo/perros/vagoneta-adultos-20-kg/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://labarraquita.com.uy/img/web/vagoneta-adultos.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://labarraquita.com.uy/catalogo/perros/estampa-criadores-adultos-15-kg/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://labarraquita.com.uy/img/web/estampa-criadores.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/ponedora-granulada-fase-1-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/ponedora-granulada-fase-1.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/ponedora-molida-fase-2-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/ponedora-molida-fase-2.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/ponedora-granulada-fase-2-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/ponedora-granulada-fase-2.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/ponedora-recria-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/ponedora-recria.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/pollito-bebe-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/pollito-bebe.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/pollo-terminacion-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/pollo-terminacion.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/mantenimiento-vacunos-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/mantenimiento-vacunos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/terneros-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/terneros.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/cerdos-engorde-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/cerdos-engorde.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/lechones-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/lechones.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/cerdas-gestantes-y-lactantes-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/cerdas-gestantes-y-lactantes.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/ovinos-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/ovinos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/conejos-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/conejos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granos/arroz-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/arroz.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granos/maiz-entero-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/maiz-entero.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granos/maiz-quebrado-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/maiz-quebrado.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granos/avena-para-caballos-35-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/avena-para-caballos.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/suplemento-proteico-1-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/suplemento-proteico.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/granja/suplemento-vitaminico/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/suplemento-vitaminico.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/sanidad/antiparasitario-pipeta-pipeta/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/antiparasitario-pipeta.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/sanidad/simparica-trio-5-10-kg-comp-masticable/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/simparica-trio-510-kg.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/sanidad/simparica-trio-20-40-kg-comp-masticable/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/simparica-trio-2040-kg.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/sanidad/simparica-trio-10-20-kg-comp-masticable/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/simparica-trio-1020-kg.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/sanidad/simparica-trio-40-60-kg-comp-masticable/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/simparica-trio-4060-kg.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/sanidad/finn-gel-veneno-para-cucarachas-30-g/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/finn-gel-veneno-para-cucarachas.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/sanidad/antiparasitario-interno-y-externo-frasco/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/antiparasitario-interno-y-externo.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/sanidad/veneno-hormigas-granulado/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/veneno-hormigas-granulado.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/sanidad/veneno-hormigas-en-polvo/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/veneno-hormigas-en-polvo.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/sanidad/auxiliar-educativo/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/auxiliar-educativo.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/sanidad/mata-pulgas-y-garrapatas/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/mata-pulgas-y-garrapatas.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/harinas/harina-de-trigo-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/harina-de-trigo.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/harinas/harina-de-trigo-0000-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/harina-de-trigo-0000.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/harinas/harina-de-trigo-000-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/harina-de-trigo-000.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/harinas/harina-de-trigo-00-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/harina-de-trigo-00.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/harinas/harina-de-trigo-integral-25-kg/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/harina-de-trigo-integral.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/harinas/harina-uruguay-0000-pack-12-uds/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/harina-uruguay-0000-pack.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://labarraquita.com.uy/catalogo/harinas/harina-primor-0000-pack-12-uds/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image><image:loc>https://labarraquita.com.uy/img/web/harina-primor-0000-pack.jpg</image:loc></image:image>
