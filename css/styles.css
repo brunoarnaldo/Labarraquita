@@ -393,6 +393,10 @@ footer{margin-top:72px;background:var(--ink);color:#BFB3A6;border-top:3px solid 
 }
 .foot-links button:hover,.foot-links a:hover{color:var(--gold);padding-left:4px}
 .foot-links .foot-all{margin-top:4px;font-weight:700;color:var(--gold)}
+/* Las marcas van en flujo, no una debajo de otra: son 16 y estiraban el pie */
+.foot-marcas{flex-direction:row;flex-wrap:wrap;gap:9px 16px}
+.foot-marcas a{font-size:.86rem;white-space:nowrap}
+.foot-marcas a:hover{padding-left:0;text-decoration:underline;text-underline-offset:3px}
 .foot-wa{
   display:inline-flex;align-items:center;gap:9px;margin-top:16px;
   background:var(--wa);color:#fff;border-radius:10px;
@@ -561,6 +565,7 @@ footer{margin-top:72px;background:var(--ink);color:#BFB3A6;border-top:3px solid 
   .foot-top{grid-template-columns:1fr;gap:30px;padding:36px 16px 32px}
   .foot-brand p{max-width:none}
   .foot-links{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px}
+  .foot-marcas{display:flex;gap:9px 16px}
   .foot-pay .wrap{gap:12px 20px;padding-top:16px;padding-bottom:16px}
   .fp{font-size:.8rem;flex:1 1 46%}
   .foot-legal{flex-direction:column;gap:4px}

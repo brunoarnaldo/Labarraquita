@@ -263,7 +263,7 @@ ${o.body}
     </div>
     <div>
       <h4>Marcas</h4>
-      <ul>
+      <ul class="foot-marcas">
         ${marcas.map(function(m){
           return `<li><a href="${m.url}">${esc(m.nombre)}</a></li>`;
         }).join("\n        ")}

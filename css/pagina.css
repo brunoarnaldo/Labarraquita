@@ -140,6 +140,9 @@ footer h4{margin:0 0 10px;font-size:.78rem;text-transform:uppercase;letter-spaci
 footer h4.mt{margin-top:16px}
 footer ul{list-style:none;margin:0;padding:0}
 footer li{margin-bottom:6px;font-size:.92rem}
+/* Las marcas van en flujo, no una debajo de otra: son 16 y estiraban el pie */
+.foot-marcas{display:flex;flex-wrap:wrap;gap:8px 16px}
+.foot-marcas li{margin-bottom:0;font-size:.86rem;white-space:nowrap}
 footer li a:hover{color:var(--gold)}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:16px 0;font-size:.8rem;color:#B8A79B}
 .foot-bottom p{margin:0 0 6px}
