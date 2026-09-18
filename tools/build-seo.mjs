@@ -259,6 +259,7 @@ ${o.body}
         }).join("\n        ")}
         <li><a href="/guias/">Guías y consejos</a></li>
         <li><a href="/preguntas-frecuentes/">Preguntas frecuentes</a></li>
+        <li><a href="/politica-de-devoluciones/">Cambios y devoluciones</a></li>
       </ul>
     </div>
     <div>
@@ -294,6 +295,25 @@ ${o.body}
 /* Mismo @id que el PetStore declarado en index.html; se repite nombre y tipo
    para que cada ficha sea válida por sí sola en el validador de Google. */
 const NEGOCIO = { "@type": ["PetStore", "Store"], "@id": SITE + "/#negocio", "name": "La Barraquita", "url": SITE + "/" };
+
+/* Política de devoluciones — la pide Google Merchant Center. El plazo tiene que
+   coincidir con el que se cargue en Merchant Center y con el texto de la página
+   /politica-de-devoluciones/ (sección 8d). Ley 17.250, art. 16: el mínimo legal
+   para compras a distancia es de 5 días hábiles; 10 corridos lo cubre siempre. */
+const DIAS_DEVOLUCION = 10;
+const POLITICA_DEVOLUCION = {
+  "@type": "MerchantReturnPolicy",
+  "@id": SITE + "/politica-de-devoluciones/#politica",
+  "url": SITE + "/politica-de-devoluciones/",
+  "applicableCountry": "UY",
+  "returnPolicyCountry": "UY",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": DIAS_DEVOLUCION,
+  "returnMethod": ["https://schema.org/ReturnInStore", "https://schema.org/ReturnByMail"],
+  "returnFees": "https://schema.org/FreeReturn",
+  "refundType": "https://schema.org/FullRefund",
+  "itemCondition": "https://schema.org/NewCondition"
+};
 
 function breadcrumbLD(crumbs){
   return {
@@ -362,7 +382,8 @@ items.forEach(function(it){
     "availability": "https://schema.org/InStock",
     "itemCondition": "https://schema.org/NewCondition",
     "seller": NEGOCIO,
-    "areaServed": { "@type":"Country", "name":"Uruguay" }
+    "areaServed": { "@type":"Country", "name":"Uruguay" },
+    "hasMerchantReturnPolicy": POLITICA_DEVOLUCION
   };
   if(it.price !== null && it.price !== undefined) offer.price = it.price;
 
@@ -655,6 +676,72 @@ marcas.forEach(function(m){
   }));
 }
 
+/* ── 8d. Política de cambios y devoluciones ───────────────────────── */
+{
+  const url = "/politica-de-devoluciones/";
+  const crumbs = [ { n:"Inicio", u:"/" }, { n:"Cambios y devoluciones", u:url } ];
+  const wa = waHref("Hola La Barraquita! Quiero hacer un cambio o devolución.");
+  const body = `
+<article class="wrap guia">
+  <p class="eyebrow">Ayuda</p>
+  <h1 class="display">Política de cambios y devoluciones</h1>
+  <p class="lead">Si algo no está bien con tu pedido, lo solucionamos. Tenés <b>${DIAS_DEVOLUCION} días corridos</b> desde que recibís o retirás tu compra para pedir un cambio o la devolución de tu dinero.</p>
+  <div class="guia-cuerpo">
+    <h2>Plazo</h2>
+    <p>Podés pedir el cambio o la devolución dentro de los ${DIAS_DEVOLUCION} días corridos siguientes a la entrega o al retiro en el local. Este plazo incluye el derecho de arrepentimiento que la Ley 17.250 de Defensa del Consumidor da a las compras hechas a distancia (por WhatsApp, teléfono o la web).</p>
+
+    <h2>Qué productos se pueden devolver</h2>
+    <ul>
+      <li><b>Por arrepentimiento o porque te equivocaste de producto:</b> el producto tiene que estar sin abrir, con la bolsa o el envase original cerrado y en buen estado.</li>
+      <li><b>Producto fallado, vencido, dañado en el transporte o distinto al que pediste:</b> lo cambiamos o te devolvemos el dinero, aunque el envase esté abierto. Mandanos una foto del producto y de la etiqueta con el lote y el vencimiento.</li>
+    </ul>
+
+    <h2>Qué productos no se pueden devolver</h2>
+    <p>Salvo que tengan un defecto, no aceptamos devoluciones de:</p>
+    <ul>
+      <li>Bolsas de ración, granos o harinas abiertas, o productos fraccionados o vendidos sueltos a pedido.</li>
+      <li>Productos de sanidad (pipetas, antiparasitarios, comprimidos y similares) con el envase abierto o el precinto roto, por seguridad de los animales.</li>
+    </ul>
+
+    <h2>Cómo pedir un cambio o devolución</h2>
+    <ul>
+      <li>Escribinos por WhatsApp al <a href="${wa}" target="_blank" rel="noopener">${TEL_WA}</a> o llamanos al 4442 4021, contándonos qué compraste y qué pasó.</li>
+      <li>Podés traer el producto al local (Intendente Lois 523, Minas) en nuestro horario, o coordinamos para retirarlo con nuestra flota.</li>
+      <li>La devolución no tiene costo para vos: el retiro del producto corre por nuestra cuenta.</li>
+    </ul>
+
+    <h2>Reembolso</h2>
+    <p>Una vez que recibimos y revisamos el producto, elegís entre cambiarlo por otro o recibir el reembolso total de lo que pagaste, incluido el envío si el problema fue nuestro. El reembolso se hace por el mismo medio de pago: en efectivo en el local, por transferencia bancaria o con la anulación en tu tarjeta de crédito o débito. Lo procesamos dentro de los 7 días hábiles siguientes a recibir el producto; en tarjetas, el crédito puede tardar lo que demore el emisor en reflejarlo.</p>
+
+    <h2>Ventas por mayor</h2>
+    <p>Para comercios y establecimientos, los cambios y devoluciones se rigen por esta misma política, salvo que se haya acordado otra cosa por escrito.</p>
+  </div>
+  <p class="guia-cta">¿Tenés un problema con tu pedido? Escribinos por WhatsApp al <a href="${wa}" target="_blank" rel="noopener"><b>${TEL_WA}</b></a> y lo resolvemos.</p>
+</article>
+`;
+  write("politica-de-devoluciones/index.html", layout({
+    title: "Política de cambios y devoluciones | La Barraquita",
+    ogTitle: "Cambios y devoluciones — La Barraquita",
+    desc: `Tenés ${DIAS_DEVOLUCION} días desde la entrega para cambiar o devolver tu compra en La Barraquita, Minas. Retiro sin costo y reembolso total por el mismo medio de pago. WhatsApp ${TEL_WA}.`,
+    url: url,
+    crumbs: crumbs,
+    jsonld: { "@context":"https://schema.org", "@graph":[
+      {
+        "@type": "WebPage",
+        "@id": SITE + url,
+        "url": SITE + url,
+        "name": "Política de cambios y devoluciones",
+        "isPartOf": { "@id": SITE + "/#sitio" },
+        "about": NEGOCIO,
+        "mainEntity": { "@id": POLITICA_DEVOLUCION["@id"] }
+      },
+      POLITICA_DEVOLUCION,
+      breadcrumbLD(crumbs)
+    ] },
+    body: body
+  }));
+}
+
 /* ── 8c. Guías (Article) ──────────────────────────────────────────── */
 GUIAS.forEach(function(g){
   const url = "/guias/" + g.slug + "/";
@@ -753,6 +840,7 @@ ${otras.length ? `<section class="wrap bloque">
     { loc:"/guias/", prio:"0.7", freq:"monthly" },
     ...GUIAS.map(function(g){ return { loc:"/guias/" + g.slug + "/", prio:"0.7", freq:"monthly" }; }),
     { loc:"/preguntas-frecuentes/", prio:"0.7", freq:"monthly" },
+    { loc:"/politica-de-devoluciones/", prio:"0.5", freq:"yearly" },
     ...items.map(function(it){ return { loc:it.url, prio:"0.6", freq:"weekly", img:it.img }; })
   ];
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

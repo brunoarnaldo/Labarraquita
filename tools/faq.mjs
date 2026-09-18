@@ -24,6 +24,10 @@ export default [
     a: "Efectivo, transferencia bancaria y todas las tarjetas de crédito y débito. El pago se coordina junto con la entrega."
   },
   {
+    q: "¿Puedo cambiar o devolver un producto?",
+    a: "Sí. Tenés 10 días corridos desde la entrega. Si te arrepentiste o te equivocaste, el producto tiene que estar sin abrir; si vino fallado, vencido o dañado, lo cambiamos o te devolvemos el dinero aunque esté abierto. El retiro no tiene costo y el reembolso es por el mismo medio de pago. Todos los detalles en nuestra página de cambios y devoluciones."
+  },
+  {
     q: "¿Venden por mayor? ¿Tienen lista mayorista?",
     a: "Sí, vendemos por mayor y por menor. Si tenés un comercio, una veterinaria, un criadero o un establecimiento rural, pedinos la lista mayorista por WhatsApp al 092 109 806 y te la mandamos."
   },
