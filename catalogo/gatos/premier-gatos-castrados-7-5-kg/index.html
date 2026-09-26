@@ -54,6 +54,28 @@
           "@type": "Country",
           "name": "Uruguay"
         },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "UY"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "@id": "https://labarraquita.com.uy/politica-de-devoluciones/#politica",
@@ -73,6 +95,10 @@
         "price": 1783
       },
       "image": "https://labarraquita.com.uy/img/web/premier-gatos-castrados.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Premier"
+      },
       "weight": {
         "@type": "QuantitativeValue",
         "value": 7.5,
@@ -170,7 +196,7 @@
     <img src="/img/web/premier-gatos-castrados.jpg" alt="Premier Gatos Castrados 7,5 kg: alimento balanceado para gatos — La Barraquita, Minas" decoding="async">
   </div>
   <div class="ficha-info">
-    <p class="eyebrow"><a href="/catalogo/gatos/">Gatos</a></p>
+    <p class="eyebrow"><a href="/catalogo/gatos/">Gatos</a> · Premier</p>
     <h1 class="display">Premier Gatos Castrados</h1>
     <p class="ficha-pres">Presentación: <b>7,5 kg</b></p>
     <p class="ficha-desc">Ración súper premium para gatos castrados de 6 meses a 6 años que viven en ambientes internos, sabor pollo.</p>

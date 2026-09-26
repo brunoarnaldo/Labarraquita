@@ -54,6 +54,28 @@
           "@type": "Country",
           "name": "Uruguay"
         },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "UY"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "@id": "https://labarraquita.com.uy/politica-de-devoluciones/#politica",
@@ -73,6 +95,10 @@
         "price": 2295
       },
       "image": "https://labarraquita.com.uy/img/web/old-prince-adulto.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Old Prince"
+      },
       "weight": {
         "@type": "QuantitativeValue",
         "value": 18,
@@ -170,7 +196,7 @@
     <img src="/img/web/old-prince-adulto.jpg" alt="Old Prince Adulto 15 kg + 3 kg: alimento balanceado para perros — La Barraquita, Minas" decoding="async">
   </div>
   <div class="ficha-info">
-    <p class="eyebrow"><a href="/catalogo/perros/">Perros</a></p>
+    <p class="eyebrow"><a href="/catalogo/perros/">Perros</a> · Old Prince</p>
     <h1 class="display">Old Prince Adulto</h1>
     <p class="ficha-pres">Presentación: <b>15 kg + 3 kg</b></p>
     <p class="ficha-desc">Ración premium para perros adultos con proteína de calidad, formulada para mantener la vitalidad y el buen estado del pelaje.</p>

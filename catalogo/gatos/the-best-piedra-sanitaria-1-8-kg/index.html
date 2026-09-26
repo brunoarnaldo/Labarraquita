@@ -54,6 +54,28 @@
           "@type": "Country",
           "name": "Uruguay"
         },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "UY"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "@id": "https://labarraquita.com.uy/politica-de-devoluciones/#politica",
@@ -73,6 +95,10 @@
         "price": 102
       },
       "image": "https://labarraquita.com.uy/img/web/the-best-piedra-sanitaria.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Best"
+      },
       "weight": {
         "@type": "QuantitativeValue",
         "value": 1.8,
@@ -162,7 +188,7 @@
     <img src="/img/web/the-best-piedra-sanitaria.jpg" alt="The Best Piedra Sanitaria 1.8 kg: piedra sanitaria absorbente para gatos — La Barraquita, Minas" decoding="async">
   </div>
   <div class="ficha-info">
-    <p class="eyebrow"><a href="/catalogo/gatos/">Gatos</a></p>
+    <p class="eyebrow"><a href="/catalogo/gatos/">Gatos</a> · The Best</p>
     <h1 class="display">The Best Piedra Sanitaria</h1>
     <p class="ficha-pres">Presentación: <b>1.8 kg</b></p>
     <p class="ficha-desc">Piedra sanitaria absorbente en presentación chica, ideal para probar o para un solo gato.</p>

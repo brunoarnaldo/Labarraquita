@@ -54,6 +54,28 @@
           "@type": "Country",
           "name": "Uruguay"
         },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "UY"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "@id": "https://labarraquita.com.uy/politica-de-devoluciones/#politica",
@@ -73,6 +95,10 @@
         "price": 13.3
       },
       "image": "https://labarraquita.com.uy/img/web/cerdas-gestantes-y-lactantes.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Racionísima"
+      },
       "weight": {
         "@type": "QuantitativeValue",
         "value": 25,
@@ -162,7 +188,7 @@
     <img src="/img/web/cerdas-gestantes-y-lactantes.jpg" alt="Cerdas Gestantes y Lactantes 25 kg: ración para animales de granja — La Barraquita, Minas" decoding="async">
   </div>
   <div class="ficha-info">
-    <p class="eyebrow"><a href="/catalogo/granja/">Granja</a></p>
+    <p class="eyebrow"><a href="/catalogo/granja/">Granja</a> · Racionísima</p>
     <h1 class="display">Cerdas Gestantes y Lactantes</h1>
     <p class="ficha-pres">Presentación: <b>25 kg</b></p>
     <p class="ficha-desc">Ración para cerdas gestantes y lactantes, con el aporte que necesitan durante la gestación y la cría.</p>

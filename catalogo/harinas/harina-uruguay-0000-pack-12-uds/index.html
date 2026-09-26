@@ -54,6 +54,28 @@
           "@type": "Country",
           "name": "Uruguay"
         },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "UY"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "@id": "https://labarraquita.com.uy/politica-de-devoluciones/#politica",
@@ -72,7 +94,11 @@
         },
         "price": 10.8
       },
-      "image": "https://labarraquita.com.uy/img/web/harina-uruguay-0000-pack.jpg"
+      "image": "https://labarraquita.com.uy/img/web/harina-uruguay-0000-pack.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Uruguay"
+      }
     },
     {
       "@type": "FAQPage",
@@ -157,7 +183,7 @@
     <img src="/img/web/harina-uruguay-0000-pack.jpg" alt="Harina Uruguay 0000 (pack) 12 uds.: harina de trigo — La Barraquita, Minas" decoding="async">
   </div>
   <div class="ficha-info">
-    <p class="eyebrow"><a href="/catalogo/harinas/">Harinas</a></p>
+    <p class="eyebrow"><a href="/catalogo/harinas/">Harinas</a> · Uruguay</p>
     <h1 class="display">Harina Uruguay 0000 (pack)</h1>
     <p class="ficha-pres">Presentación: <b>12 uds.</b></p>
     <p class="ficha-desc">Pack de 12 paquetes de Harina Uruguay 0000 de 1 kg, para reventa en almacenes y comercios.</p>

@@ -54,6 +54,28 @@
           "@type": "Country",
           "name": "Uruguay"
         },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "UY"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "@id": "https://labarraquita.com.uy/politica-de-devoluciones/#politica",
@@ -73,6 +95,10 @@
         "price": 11.23
       },
       "image": "https://labarraquita.com.uy/img/web/harina-de-trigo-00.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "San José"
+      },
       "weight": {
         "@type": "QuantitativeValue",
         "value": 25,
@@ -162,7 +188,7 @@
     <img src="/img/web/harina-de-trigo-00.jpg" alt="Harina de Trigo 00 25 kg: harina de trigo — La Barraquita, Minas" decoding="async">
   </div>
   <div class="ficha-info">
-    <p class="eyebrow"><a href="/catalogo/harinas/">Harinas</a></p>
+    <p class="eyebrow"><a href="/catalogo/harinas/">Harinas</a> · San José</p>
     <h1 class="display">Harina de Trigo 00</h1>
     <p class="ficha-pres">Presentación: <b>25 kg</b></p>
     <p class="ficha-desc">Harina de trigo 00 en bolsa de 25 kg, para panes rústicos y masas más firmes.</p>

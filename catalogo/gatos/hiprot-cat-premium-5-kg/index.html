@@ -54,6 +54,28 @@
           "@type": "Country",
           "name": "Uruguay"
         },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "UY"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "@id": "https://labarraquita.com.uy/politica-de-devoluciones/#politica",
@@ -73,6 +95,10 @@
         "price": 590
       },
       "image": "https://labarraquita.com.uy/img/web/hiprot-cat-premium.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Hiprot"
+      },
       "weight": {
         "@type": "QuantitativeValue",
         "value": 5,
@@ -170,7 +196,7 @@
     <img src="/img/web/hiprot-cat-premium.jpg" alt="Hiprot Cat Premium 5 kg: alimento balanceado para gatos — La Barraquita, Minas" decoding="async">
   </div>
   <div class="ficha-info">
-    <p class="eyebrow"><a href="/catalogo/gatos/">Gatos</a></p>
+    <p class="eyebrow"><a href="/catalogo/gatos/">Gatos</a> · Hiprot</p>
     <h1 class="display">Hiprot Cat Premium</h1>
     <p class="ficha-pres">Presentación: <b>5 kg</b></p>
     <p class="ficha-desc">Ración premium para gatos adultos, nutrición completa en una bolsa práctica de 5 kg.</p>

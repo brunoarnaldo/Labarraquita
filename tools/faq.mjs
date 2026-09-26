@@ -13,7 +13,7 @@ export default [
   },
   {
     q: "¿Cuánto cuesta el envío?",
-    a: "Depende de la zona y del volumen del pedido. Te lo confirmamos por WhatsApp antes de enviar, sin sorpresas. En pedidos grandes o por mayor suele estar bonificado: consultanos."
+    a: "En Minas el envío no tiene costo. Al resto de Lavalleja y del país depende de la zona y del volumen del pedido: te lo confirmamos por WhatsApp antes de enviar, sin sorpresas. En pedidos grandes o por mayor suele estar bonificado: consultanos."
   },
   {
     q: "¿Puedo retirar en el local?",

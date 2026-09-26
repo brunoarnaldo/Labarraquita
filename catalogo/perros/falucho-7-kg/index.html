@@ -54,6 +54,28 @@
           "@type": "Country",
           "name": "Uruguay"
         },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "UY"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "@id": "https://labarraquita.com.uy/politica-de-devoluciones/#politica",
@@ -73,6 +95,10 @@
         "price": 325
       },
       "image": "https://labarraquita.com.uy/img/web/falucho.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Falucho"
+      },
       "weight": {
         "@type": "QuantitativeValue",
         "value": 7,
@@ -170,7 +196,7 @@
     <img src="/img/web/falucho.jpg" alt="Falucho 7 kg: alimento balanceado para perros — La Barraquita, Minas" decoding="async">
   </div>
   <div class="ficha-info">
-    <p class="eyebrow"><a href="/catalogo/perros/">Perros</a></p>
+    <p class="eyebrow"><a href="/catalogo/perros/">Perros</a> · Falucho</p>
     <h1 class="display">Falucho</h1>
     <p class="ficha-pres">Presentación: <b>7 kg</b></p>
     <p class="ficha-desc">Alimento económico para perros adultos, para la alimentación de todos los días.</p>

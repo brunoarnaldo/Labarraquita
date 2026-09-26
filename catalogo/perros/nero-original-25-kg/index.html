@@ -54,6 +54,28 @@
           "@type": "Country",
           "name": "Uruguay"
         },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "UY"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "@id": "https://labarraquita.com.uy/politica-de-devoluciones/#politica",
@@ -73,6 +95,10 @@
         "price": 2003
       },
       "image": "https://labarraquita.com.uy/img/web/nero-original.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Nero"
+      },
       "weight": {
         "@type": "QuantitativeValue",
         "value": 25,
@@ -170,7 +196,7 @@
     <img src="/img/web/nero-original.jpg" alt="Nero Original 25 kg: alimento balanceado para perros — La Barraquita, Minas" decoding="async">
   </div>
   <div class="ficha-info">
-    <p class="eyebrow"><a href="/catalogo/perros/">Perros</a></p>
+    <p class="eyebrow"><a href="/catalogo/perros/">Perros</a> · Nero</p>
     <h1 class="display">Nero Original</h1>
     <p class="ficha-pres">Presentación: <b>25 kg</b></p>
     <p class="ficha-desc">Ración para perros adultos de todas las razas en bolsa de 25 kg, muy rendidora.</p>

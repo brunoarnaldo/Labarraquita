@@ -54,6 +54,28 @@
           "@type": "Country",
           "name": "Uruguay"
         },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "UY"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "@id": "https://labarraquita.com.uy/politica-de-devoluciones/#politica",
@@ -73,6 +95,10 @@
         "price": 1500
       },
       "image": "https://labarraquita.com.uy/img/web/estampa-criadores.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Estampa"
+      },
       "weight": {
         "@type": "QuantitativeValue",
         "value": 15,
@@ -170,7 +196,7 @@
     <img src="/img/web/estampa-criadores.jpg" alt="Estampa Criadores Adultos 15 kg: alimento balanceado para perros — La Barraquita, Minas" decoding="async">
   </div>
   <div class="ficha-info">
-    <p class="eyebrow"><a href="/catalogo/perros/">Perros</a></p>
+    <p class="eyebrow"><a href="/catalogo/perros/">Perros</a> · Estampa</p>
     <h1 class="display">Estampa Criadores Adultos</h1>
     <p class="ficha-pres">Presentación: <b>15 kg</b></p>
     <p class="ficha-desc">Ración de alto rendimiento para perros adultos, con 23 % de proteínas, omega 3, 6 y 9 y protección inmunológica.</p>

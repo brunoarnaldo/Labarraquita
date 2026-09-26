@@ -92,6 +92,42 @@ const MARCAS = [
     desc:"Simparica Trio es el antiparasitario mensual de Zoetis en comprimido masticable: protege contra pulgas, garrapatas, gusano del corazón y parásitos intestinales en una sola toma. Viene en cuatro presentaciones según el peso del perro, de 5 a 60 kg. Consultá con tu veterinario la dosis correcta." }
 ];
 
+/* Marcas sin página propia: van al "brand" del marcado Product (Google avisa si
+   falta) y al renglón sobre el título, sin enlace. Las que no están en el nombre
+   del producto salen de la bolsa de la foto, confirmadas por el cliente el
+   2026-09-26. Los granos a granel y los genéricos de sanidad quedan sin marca. */
+const OTRAS_MARCAS = [
+  { nombre:"Hiprot", re:/^hiprot\b/i },
+  { nombre:"Premier", re:/^premier\b/i },
+  { nombre:"Monkcat", re:/^monkcat\b/i },
+  { nombre:"Stonecat", re:/^stonecat\b/i },
+  { nombre:"Trigato", re:/^trigato\b/i },
+  { nombre:"The Best", re:/^the best\b/i },
+  { nombre:"Sepicat", re:/^sepicat\b/i },
+  { nombre:"Old Prince", re:/^old prince\b/i },
+  { nombre:"Falucho", re:/^falucho\b/i },
+  { nombre:"Bandido's", re:/^bandido/i },
+  { nombre:"Fridy", re:/^fridy\b/i },
+  { nombre:"Nero", re:/^nero\b/i },
+  { nombre:"Pedigree", re:/^pedigree\b/i },
+  { nombre:"Gran Plus", re:/^gran plus\b/i },
+  { nombre:"Natural Dog", re:/^natural dog\b/i },
+  { nombre:"Lager", re:/^lager\b/i },
+  { nombre:"Primocão", re:/^primoc[aã]o/i },
+  { nombre:"Dogui", re:/^dogui\b/i },
+  { nombre:"Charrua", re:/^charr[uú]a\b/i },
+  { nombre:"The Golden Choice", re:/^the golden choice\b/i },
+  { nombre:"Rex", re:/^rex\b/i },
+  { nombre:"Vagoneta", re:/^vagoneta\b/i },
+  { nombre:"Estampa", re:/^estampa\b/i },
+  { nombre:"Finn", re:/^finn\b/i },
+  { nombre:"Uruguay", re:/^harina uruguay\b/i },
+  { nombre:"Primor", re:/^harina primor\b/i },
+  { nombre:"Racionísima", ids:["f01","f02","f03","f04","f05","f06","f07","f08","f09","f10","f11","f12","f13"] },
+  { nombre:"San José", ids:["h01","h02","h03","h04","h05"] },
+  { nombre:"Vetnil", ids:["f14","f15"] }
+];
+
 /* ── 2. Utilidades ────────────────────────────────────────────────── */
 function slug(s){
   return String(s)
@@ -129,6 +165,9 @@ const items = PRODUCTS.map(function(p){
   while(usados.has(cat.slug + "/" + s)){ s = base + "-" + (n++); }
   usados.add(cat.slug + "/" + s);
   const marca = MARCAS.find(function(m){ return m.re.test(p.name); });
+  const otra = marca ? null : OTRAS_MARCAS.find(function(m){
+    return m.ids ? m.ids.includes(p.id) : m.re.test(p.name);
+  });
   return {
     ...p,
     cat_slug: cat.slug,
@@ -139,6 +178,7 @@ const items = PRODUCTS.map(function(p){
     img: IMGS[p.img] ? "/" + IMGS[p.img] : null,
     titulo: p.name + (p.pres ? " " + p.pres : ""),
     marca: marca ? marca.nombre : null,
+    marcaSinPagina: otra ? otra.nombre : null,
     precio: precio(p),
     desc: DESCRIPCIONES[p.id] || ""
   };
@@ -315,6 +355,22 @@ const POLITICA_DEVOLUCION = {
   "itemCondition": "https://schema.org/NewCondition"
 };
 
+/* Envío — sin costo en Minas y con costo variable al resto del país (según
+   zona y volumen, faq.mjs). Google no admite zonas por ciudad ni departamento
+   en Uruguay, solo el país entero, así que no hay forma de declarar el envío
+   gratis de Minas sin que parezca gratis a todo el país: se declara destino y
+   plazo, y shippingRate queda afuera. Plazo: en el día en Minas, menos de 24 h
+   en el resto. */
+const ENVIO = {
+  "@type": "OfferShippingDetails",
+  "shippingDestination": { "@type":"DefinedRegion", "addressCountry":"UY" },
+  "deliveryTime": {
+    "@type": "ShippingDeliveryTime",
+    "handlingTime": { "@type":"QuantitativeValue", "minValue":0, "maxValue":0, "unitCode":"DAY" },
+    "transitTime":  { "@type":"QuantitativeValue", "minValue":0, "maxValue":1, "unitCode":"DAY" }
+  }
+};
+
 function breadcrumbLD(crumbs){
   return {
     "@type": "BreadcrumbList",
@@ -383,6 +439,7 @@ items.forEach(function(it){
     "itemCondition": "https://schema.org/NewCondition",
     "seller": NEGOCIO,
     "areaServed": { "@type":"Country", "name":"Uruguay" },
+    "shippingDetails": ENVIO,
     "hasMerchantReturnPolicy": POLITICA_DEVOLUCION
   };
   if(it.price !== null && it.price !== undefined) offer.price = it.price;
@@ -397,7 +454,8 @@ items.forEach(function(it){
     "offers": offer
   };
   if(it.img) producto.image = SITE + it.img;
-  if(it.marca) producto.brand = { "@type":"Brand", "name": it.marca };
+  const marcaLD = it.marca || it.marcaSinPagina;
+  if(marcaLD) producto.brand = { "@type":"Brand", "name": marcaLD };
 
   /* Peso neto y análisis garantizado como propiedades del producto, para que
      Google entienda la ficha y no solo el precio. */
@@ -429,7 +487,7 @@ items.forEach(function(it){
     ${it.img ? `<img src="${it.img}" alt="${esc(it.titulo)}: ${esc(it.tipo).toLowerCase()} — La Barraquita, Minas" decoding="async">` : ""}
   </div>
   <div class="ficha-info">
-    <p class="eyebrow"><a href="/catalogo/${it.cat_slug}/">${esc(it.cat_label)}</a>${it.marca ? ` · <a href="/marcas/${slug(it.marca)}/">${esc(it.marca)}</a>` : ""}</p>
+    <p class="eyebrow"><a href="/catalogo/${it.cat_slug}/">${esc(it.cat_label)}</a>${it.marca ? ` · <a href="/marcas/${slug(it.marca)}/">${esc(it.marca)}</a>` : it.marcaSinPagina ? ` · ${esc(it.marcaSinPagina)}` : ""}</p>
     <h1 class="display">${esc(it.name)}</h1>
     ${it.pres ? `<p class="ficha-pres">Presentación: <b>${esc(it.pres)}</b></p>` : ""}
     ${it.desc ? `<p class="ficha-desc">${esc(it.desc)}</p>` : ""}

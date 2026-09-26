@@ -54,6 +54,28 @@
           "@type": "Country",
           "name": "Uruguay"
         },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "UY"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
         "hasMerchantReturnPolicy": {
           "@type": "MerchantReturnPolicy",
           "@id": "https://labarraquita.com.uy/politica-de-devoluciones/#politica",
@@ -72,7 +94,11 @@
         },
         "price": 620
       },
-      "image": "https://labarraquita.com.uy/img/web/suplemento-vitaminico.jpg"
+      "image": "https://labarraquita.com.uy/img/web/suplemento-vitaminico.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Vetnil"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -144,7 +170,7 @@
     <img src="/img/web/suplemento-vitaminico.jpg" alt="Suplemento Vitamínico: ración para animales de granja — La Barraquita, Minas" decoding="async">
   </div>
   <div class="ficha-info">
-    <p class="eyebrow"><a href="/catalogo/granja/">Granja</a></p>
+    <p class="eyebrow"><a href="/catalogo/granja/">Granja</a> · Vetnil</p>
     <h1 class="display">Suplemento Vitamínico</h1>
     
     <p class="ficha-desc">Suplemento vitamínico y mineral para reforzar la alimentación de animales de granja.</p>
