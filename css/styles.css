@@ -419,6 +419,8 @@ footer{margin-top:72px;background:var(--ink);color:#BFB3A6;border-top:3px solid 
 .foot-bottom .wrap{padding-top:16px;padding-bottom:18px}
 .foot-disclaimer{margin:0 0 8px;line-height:1.5;max-width:82ch}
 .foot-legal{display:flex;flex-wrap:wrap;gap:6px 28px;justify-content:space-between}
+.foot-legal a{color:#D6CABD;text-decoration:underline;text-underline-offset:2px}
+.foot-legal a:hover{color:var(--gold)}
 
 /* ── Overlays (ficha y pedido) ── */
 .overlay{
