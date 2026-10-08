@@ -581,6 +581,13 @@
     <image:image><image:loc>https://labarraquita.com.uy/img/web/frost-razas-grandes.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://labarraquita.com.uy/catalogo/perros/frost-razas-grandes-mas-colchoneta-de-regalo-15-kg-mas-2-kg/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image><image:loc>https://labarraquita.com.uy/img/ofertas/frost-razas-grandes-colchoneta.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://labarraquita.com.uy/catalogo/perros/frost-cachorros-15-kg-mas-2-kg/</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>

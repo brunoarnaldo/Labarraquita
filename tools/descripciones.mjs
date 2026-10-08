@@ -65,6 +65,7 @@ export default {
   p34: "Ración premium para perros adultos de razas pequeñas, en bolsa de 15 kg.",
   p35: "Ración premium para perros adultos de razas pequeñas, en bolsa de 10,1 kg.",
   p36: "Ración premium para perros adultos de razas grandes, con cuidado de articulaciones y 2 kg de regalo.",
+  p54: "Oferta: Frost Razas Grandes 15 kg + 2 kg de regalo, y además te llevás una colchoneta de regalo para tu perro. Hasta agotar stock.",
   p37: "Ración premium para cachorros, con proteínas de calidad para el desarrollo, en bolsa con 2 kg de regalo.",
   p38: "Pedigree para perros adultos de todas las razas, sabor carne y vegetales, con vitaminas y minerales para huesos fuertes.",
   p39: "Ración gourmet saborizada con cordero para perros adultos, en bolsa de 15 kg + 1,5 kg de regalo.",
