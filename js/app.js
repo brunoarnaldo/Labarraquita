@@ -12,39 +12,39 @@
       msg: "Frost Razas Grandes — 15 kg + 2 kg de regalo + colchoneta de regalo por $ 3192"
     },
     {
-      img: "img/ofertas/nhock-premium-25-10.jpg",
-      alt: "Nhock Premium para perros adultos: 25 kg + 10 kg a $ 1855",
-      msg: "Nhock Premium perros adultos — 25 kg + 10 kg por $ 1855"
+      img: "img/ofertas/rex-7kg-5-bolsas.jpg",
+      alt: "Oferta Rex Adultos 7 kg: llevando 5 bolsas, cada una te queda a $ 332",
+      msg: "Rex Adultos 7 kg — 5 bolsas a $ 332 cada una"
     },
     {
-      img: "img/ofertas/combo-oriunda-20-2-7.jpg",
-      alt: "Combo Oriunda para perros adultos: 20 kg + 2 kg de regalo + 7 kg a $ 1205",
-      msg: "Combo Oriunda perros adultos — 20 kg + 2 kg de regalo + 7 kg por $ 1205"
+      img: "img/ofertas/bravo-light-15-2.jpg",
+      alt: "Oferta Bravo Light pollo y verduras para perros adultos: 15 kg + 2 kg de regalo a $ 1600",
+      msg: "Bravo Light pollo y verduras — 15 kg + 2 kg de regalo por $ 1600"
     },
     {
-      img: "img/ofertas/bravo-baby-10-1.jpg",
-      alt: "Bravo Baby leche y cereales: 10 kg + 1 kg de regalo a $ 1200",
-      msg: "Bravo Baby leche y cereales — 10 kg + 1 kg de regalo por $ 1200"
+      img: "img/ofertas/raval-alta-competencia-jornada.jpg",
+      alt: "Raval Alta Competencia 25 kg: ración para equinos de competencia y de andar",
+      msg: "Raval Alta Competencia para equinos — 25 kg"
     },
     {
-      img: "img/ofertas/le-roy-gatos-castrados-10-1.jpg",
-      alt: "Le Roy Grillé de Carnes para gatos castrados: 10,1 kg + 1 kg de regalo a $ 1255",
-      msg: "Le Roy Premium Grillé de Carnes gatos castrados — 10,1 kg + 1 kg de regalo por $ 1255"
+      img: "img/ofertas/raval-alta-competencia-energia.jpg",
+      alt: "Raval Alta Competencia 25 kg: energía para equinos de competencia y de andar",
+      msg: "Raval Alta Competencia para equinos — 25 kg"
     },
     {
-      img: "img/ofertas/le-roy-gatos-castrados-20kg.jpg",
-      alt: "Ofertón Le Roy Grillé de Carnes para gatos castrados: 20 kg a $ 2288",
-      msg: "Le Roy Premium Grillé de Carnes gatos castrados — 20 kg por $ 2288"
+      img: "img/ofertas/zafra-cerdos.jpg",
+      alt: "Comenzó la zafra de cerdos: raciones Raval y Racionísima de 25 kg para cerdas madres, lechones y engorde",
+      msg: "Raciones para cerdos (Raval / Racionísima 25 kg) — cerdas madres, lechones o engorde"
     },
     {
-      img: "img/ofertas/oriunda-7kg-comerciantes.jpg",
-      alt: "Oriunda Adultos 7 kg para comerciantes: llevando 5 bolsas, $ 270 cada una",
-      msg: "Oriunda Adultos 7 kg — 5 bolsas a $ 270 cada una (precio comerciantes)"
+      img: "img/ofertas/zafra-cerdos-2.jpg",
+      alt: "Zafra de cerdos: amplia variedad de raciones Raval y Racionísima para cada etapa",
+      msg: "Raciones para cerdos (Raval / Racionísima 25 kg) — cerdas madres, lechones o engorde"
     },
     {
-      img: "img/ofertas/100-nutricion.jpg",
-      alt: "100 % nutrición para tu mascota: hacé tu pedido",
-      msg: null
+      img: "img/ofertas/criolla-7kg-comerciantes.jpg",
+      alt: "Atención comerciantes: con la compra de 10 bolsas de Criolla 7 kg, cada una te queda a $ 305",
+      msg: "Criolla Adultos 7 kg — 10 bolsas a $ 305 cada una (precio comerciantes)"
     }
   ];
 
