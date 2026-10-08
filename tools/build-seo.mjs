@@ -247,6 +247,7 @@ function layout(o){
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Libre+Franklin:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/pagina.css">
+<script src="/js/analytics.js" defer></script>
 <script type="application/ld+json">
 ${JSON.stringify(o.jsonld, null, 2)}
 </script>
@@ -497,7 +498,7 @@ items.forEach(function(it){
       <p>${esc(it.promo.txt)}</p>
       ${it.promo.img ? `<img src="/${it.promo.img}" alt="Promo ${esc(it.titulo)}: ${esc((it.flag || "regalo").toLowerCase())}" loading="lazy" decoding="async">` : ""}
     </div>` : ""}
-    <a class="btn-wa" href="${waHref(pedido)}" target="_blank" rel="noopener">Pedir por WhatsApp ${TEL_WA}</a>
+    <a class="btn-wa" href="${waHref(pedido)}" target="_blank" rel="noopener" data-track="ficha" data-producto="${esc(it.titulo)}">Pedir por WhatsApp ${TEL_WA}</a>
     <p class="ficha-nota">Coordinás pago y entrega directo por WhatsApp. El precio es de referencia: confirmá stock y valor al hacer el pedido.</p>
     <ul class="ficha-ventajas">
       <li>Envío en el día a todo el país con flota propia</li>

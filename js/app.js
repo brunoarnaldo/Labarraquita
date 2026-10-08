@@ -375,6 +375,7 @@
       if(n.cta){
         var a = document.createElement("a");
         a.className = "nav-cta";
+        a.setAttribute("data-track", "menu-mayorista");
         a.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent("¡Hola La Barraquita! Me interesa comprar POR MAYOR. ¿Me pueden pasar la lista de precios mayoristas?");
         a.target = "_blank"; a.rel = "noopener";
         a.addEventListener("click", closeNavMenu);
@@ -543,6 +544,10 @@
     }).join("");
     drawerTotal.textContent = totalsText();
     checkout.href = checkoutLink();
+    // Resumen del pedido para la medición del clic (js/analytics.js)
+    checkout.setAttribute("data-producto", ids.map(function(id){
+      return cart[id] + "× " + byId[id].name + " " + byId[id].pres;
+    }).join(", "));
   }
 
   function checkoutLink(){
@@ -592,7 +597,7 @@
         '</div>' +
         '<button class="btn-checkout" data-madd aria-label="Agregar al pedido">Agregar al pedido</button>' +
       '</div>' +
-      '<a class="m-single" target="_blank" rel="noopener" href="' + waLink(p) + '">o pedir solo este por WhatsApp →</a>' +
+      '<a class="m-single" target="_blank" rel="noopener" href="' + waLink(p) + '" data-track="vista-rapida" data-producto="' + esc(p.name + " " + p.pres) + '">o pedir solo este por WhatsApp →</a>' +
       (RUTAS[p.id] ? '<a class="m-ficha" href="' + RUTAS[p.id] + '">Ver ficha completa para compartir →</a>' : '');
     openOverlay(modalOverlay);
   }
@@ -664,6 +669,8 @@
       var s = document.createElement("a"); s.className = "slide";
       s.href = waOferta(o);
       s.target = "_blank"; s.rel = "noopener";
+      s.setAttribute("data-track", "oferta-carrusel");
+      s.setAttribute("data-producto", o.msg || o.alt);
       s.setAttribute("aria-label", "Pedir por WhatsApp: " + o.alt);
       var inner = document.createElement("div"); inner.className = "slide-in";
       // Fondo difuminado con la misma foto para rellenar las bandas (imágenes que no son 3:4).
