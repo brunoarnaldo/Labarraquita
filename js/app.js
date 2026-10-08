@@ -7,6 +7,11 @@
      Para cambiar las promos del mes: reemplazar las imágenes (3:4, 1200 × 1600) y el texto de "msg". */
   var OFERTAS = [
     {
+      img: "img/ofertas/frost-razas-grandes-colchoneta.jpg",
+      alt: "Frost Razas Grandes 15 kg + 2 kg de regalo + colchoneta de regalo a $ 3192",
+      msg: "Frost Razas Grandes — 15 kg + 2 kg de regalo + colchoneta de regalo por $ 3192"
+    },
+    {
       img: "img/ofertas/nhock-premium-25-10.jpg",
       alt: "Nhock Premium para perros adultos: 25 kg + 10 kg a $ 1855",
       msg: "Nhock Premium perros adultos — 25 kg + 10 kg por $ 1855"
