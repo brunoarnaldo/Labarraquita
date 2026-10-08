@@ -175,3 +175,11 @@ footer li a:hover{color:var(--gold)}
 .faq-prod dd{margin:0;color:var(--body);padding-bottom:12px;border-bottom:1px solid var(--line)}
 .faq-prod dd:last-child{border-bottom:0}
 @media (max-width:600px){ .tabla th[scope="row"]{width:auto} }
+
+/* Promo en la ficha de producto */
+.ficha-promo{background:var(--bordo-tint);border:1px solid var(--gold);border-radius:14px;padding:14px 16px;margin:0 0 18px;max-width:460px}
+.ficha-promo-tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink);background:var(--gold);border-radius:999px;padding:4px 10px}
+.ficha-promo p{margin:10px 0 0;font-size:.95rem;color:var(--body)}
+.ficha-promo img{display:block;width:100%;height:auto;border-radius:10px;margin-top:12px}
+.card-art{position:relative}
+.card-art .flag{position:absolute;top:8px;left:8px;z-index:1;background:var(--gold);color:var(--gold-ink);font-size:.62rem;font-weight:800;letter-spacing:.04em;padding:4px 9px;border-radius:20px}

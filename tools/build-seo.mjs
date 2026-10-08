@@ -396,7 +396,7 @@ function faqLD(preguntas){
 function card(it){
   return `<li class="card">
         <a href="${it.url}">
-          <span class="card-art">${it.img ? `<img src="${it.img}" alt="${esc(it.titulo)} — ${esc(it.tipo)}" loading="lazy" decoding="async">` : ""}</span>
+          <span class="card-art">${it.flag ? `<span class="flag">${esc(it.flag)}</span>` : ""}${it.img ? `<img src="${it.img}" alt="${esc(it.titulo)} — ${esc(it.tipo)}" loading="lazy" decoding="async">` : ""}</span>
           <span class="card-cat">${esc(it.cat_label)}</span>
           <span class="card-name">${esc(it.name)}</span>
           ${it.pres ? `<span class="card-pres">${esc(it.pres)}</span>` : ""}
@@ -413,7 +413,7 @@ items.forEach(function(it){
     { n:it.cat_label, u:"/catalogo/" + it.cat_slug + "/" },
     { n:it.titulo, u:it.url }
   ];
-  const pedido = `Hola La Barraquita! Quiero pedir: ${it.name}${it.pres ? " (" + it.pres + ")" : ""}. ¿Está disponible?`;
+  const pedido = `Hola La Barraquita! Quiero pedir: ${it.name}${it.pres ? " (" + it.pres + ")" : ""}${it.promo ? " con la promo: " + (it.flag || "regalo").toLowerCase() : ""}. ¿Está disponible?`;
   const relacionados = porCat[it.cat].filter(function(o){ return o.id !== it.id; }).slice(0, 8);
 
   /* Contenido propio de esta ficha: precio por kilo, rendimiento, análisis
@@ -491,7 +491,12 @@ items.forEach(function(it){
     <h1 class="display">${esc(it.name)}</h1>
     ${it.pres ? `<p class="ficha-pres">Presentación: <b>${esc(it.pres)}</b></p>` : ""}
     ${it.desc ? `<p class="ficha-desc">${esc(it.desc)}</p>` : ""}
-    <p class="ficha-precio">${esc(it.precio)}</p>
+    <p class="ficha-precio">${esc(it.precio)}</p>${it.promo ? `
+    <div class="ficha-promo">
+      <span class="ficha-promo-tag">Promo · ${esc(it.flag || "Regalo")}</span>
+      <p>${esc(it.promo.txt)}</p>
+      ${it.promo.img ? `<img src="/${it.promo.img}" alt="Promo ${esc(it.titulo)}: ${esc((it.flag || "regalo").toLowerCase())}" loading="lazy" decoding="async">` : ""}
+    </div>` : ""}
     <a class="btn-wa" href="${waHref(pedido)}" target="_blank" rel="noopener">Pedir por WhatsApp ${TEL_WA}</a>
     <p class="ficha-nota">Coordinás pago y entrega directo por WhatsApp. El precio es de referencia: confirmá stock y valor al hacer el pedido.</p>
     <ul class="ficha-ventajas">
