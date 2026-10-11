@@ -181,6 +181,17 @@
     return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
   }
 
+  /* Palabras genéricas que no están en el nombre del producto: así "comida para
+     perros" (como llega desde Google con ?q=) encuentra las raciones de perro.
+     La "y" separa alternativas: "perros y gatos" muestra los dos. */
+  var GENERICAS = ["comida","comidas","alimento","alimentos","racion","raciones","balanceado","balanceados",
+    "para","de","del","el","la","los","las","y","en"];
+  function gruposBusqueda(q){
+    return q.split(/\s+y\s+/).map(function(parte){
+      return parte.split(/\s+/).filter(function(w){ return w && GENERICAS.indexOf(w) === -1; });
+    }).filter(function(g){ return g.length; });
+  }
+
   /* Paginaci\u00f3n numerada: \u2039 1 2 3 \u2026 \u203a con ventana m\u00f3vil de PAGE_WINDOW n\u00fameros */
   function renderPager(page, pageCount){
     if(pageCount <= 1){ pager.hidden = true; pager.innerHTML = ""; return; }
@@ -210,6 +221,7 @@
   function render(keepPage){
     if(!keepPage) state.page = 0;
     var q = norm(state.q.trim());
+    var grupos = gruposBusqueda(q);
     var items = PRODUCTS.filter(function(p){
       if(state.cat !== "todos" && p.cat !== state.cat) return false;
       if(state.sub){
@@ -217,8 +229,9 @@
         if(state.sub.inc.length && !state.sub.inc.some(function(k){ return nm.indexOf(k) !== -1; })) return false;
         if(state.sub.exc.length && state.sub.exc.some(function(k){ return nm.indexOf(k) !== -1; })) return false;
       }
-      if(!q) return true;
-      return norm(p.name + " " + p.pres + " " + catLabel[p.cat]).indexOf(q) !== -1;
+      if(!grupos.length) return true;
+      var texto = norm(p.name + " " + p.pres + " " + catLabel[p.cat] + (/sanitaria/i.test(p.name) ? " arena" : ""));
+      return grupos.some(function(g){ return g.every(function(w){ return texto.indexOf(w) !== -1; }); });
     });
     items = sortItems(items);
     var baseTitle = state.cat === "todos" ? "Productos" : catLabel[state.cat];

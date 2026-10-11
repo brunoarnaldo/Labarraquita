@@ -45,7 +45,7 @@ export default [
   },
   {
     q: "¿Qué marcas de ración tienen?",
-    a: "Trabajamos con las marcas líderes: Astro, Bravo, Frost, Equilibrio, Criolla, Connie, Le Roy, Old Prince, Nhock, Pedigree, Gran Plus, Atacama, Fámil y muchas más, en perros, gatos y granja. Si buscás una marca puntual que no ves en la web, preguntanos."
+    a: "Trabajamos con las marcas líderes en comida para perros y gatos y en raciones de granja: Astro, Bravo, Frost, Equilibrio, Criolla, Connie, Le Roy, Old Prince, Nhock, Pedigree, Gran Plus, Atacama, Fámil y muchas más. Si buscás una marca puntual que no ves en la web, preguntanos."
   },
   {
     q: "¿Cómo sé qué ración le conviene a mi perro o gato?",

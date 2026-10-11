@@ -21,7 +21,7 @@ import FICHAS from "./fichas.mjs";
 import {
   bloquePrecio, bloqueRacion, bloqueFichaTecnica, bloqueComparativa,
   faqProducto, bloqueFaq, precioUnitario, parsePres,
-  bloqueVariantes, familiaDe
+  bloqueVariantes, familiaDe, money
 } from "./contenido.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -35,23 +35,47 @@ const app = fs.readFileSync(path.join(ROOT, "js/app.js"), "utf8");
 const PRODUCTS = JSON.parse(app.match(/var PRODUCTS\s*=\s*(\[[\s\S]*?\]);/)[1]);
 const IMGS = JSON.parse(app.match(/var IMGS\s*=\s*(\{[\s\S]*?\});/)[1]);
 
+/* kw: cómo lo busca la gente en Google ("comida para perros", no "ración"),
+   va en el título, la descripción y el texto de la página.
+   titulo: <title> de la página de categoría; {n} = cantidad de productos.
+   faq: preguntas de la categoría que se responden con los productos que
+   cumplen re (ver faqCategoria). */
 const CATS = {
-  perro:   { slug:"perros",  label:"Perros",  h1:"Raciones y alimento balanceado para perros",
+  perro:   { slug:"perros",  label:"Perros",  h1:"Comida para perros: raciones y alimento balanceado",
+             kw:"comida para perros", enlace:"Comida para perros",
+             titulo:"Comida para perros: {n} raciones con precio",
              tipo:"Alimento balanceado para perros",
-             intro:"Trabajamos con las marcas líderes en ración para perros: Astro, Bravo, Frost, Equilibrio, Criolla, Connie, Old Prince, Pedigree y muchas más. Tenemos fórmulas para cachorros, adultos, razas pequeñas, razas grandes y perros mayores de 7 años, en bolsas desde 7 kg hasta 25 kg, con bonificación de kilos en la mayoría de las presentaciones." },
-  gato:    { slug:"gatos",   label:"Gatos",   h1:"Raciones y alimento balanceado para gatos",
+             intro:"Trabajamos con las marcas líderes en comida para perros: Astro, Bravo, Frost, Equilibrio, Criolla, Connie, Old Prince, Pedigree y muchas más. Tenemos ración para cachorros, adultos, razas pequeñas, razas grandes y perros mayores de 7 años, en bolsas desde 7 kg hasta 25 kg, con bonificación de kilos en la mayoría de las presentaciones.",
+             faq:[
+               { q:"¿Tienen comida para cachorros?", re:/cachorro|baby|puppy/i, a:"Son fórmulas para perros en crecimiento." }
+             ] },
+  gato:    { slug:"gatos",   label:"Gatos",   h1:"Comida para gatos: raciones y piedras sanitarias",
+             kw:"comida para gatos", enlace:"Comida para gatos",
+             titulo:"Comida para gatos y piedras sanitarias",
              tipo:"Alimento balanceado para gatos",
-             intro:"Ración para gatos adultos y castrados de las mejores marcas —Atacama, Frost, Le Roy, Fámil, Equilibrio, Criolla, Connie— más la variedad más completa de piedras sanitarias de Minas. Vendemos por mayor y por menor, con envío en el día a todo el país." },
-  granja:  { slug:"granja",  label:"Granja",  h1:"Raciones para animales de granja",
+             intro:"Comida para gatos adultos y castrados de las mejores marcas —Atacama, Frost, Le Roy, Fámil, Equilibrio, Criolla, Connie— más la variedad más completa de piedras sanitarias (arena para gatos) de Minas. Vendemos por mayor y por menor, con envío en el día a todo el país.",
+             faq:[
+               { q:"¿Tienen comida para gatos castrados?", re:/castrad/i, a:"Son fórmulas pensadas para controlar el peso después de la castración." },
+               { q:"¿Venden piedras sanitarias (arena para gatos)?", re:/sanitaria/i, a:"Hay piedras absorbentes y aglomerantes, en bolsas de distinto tamaño." }
+             ] },
+  granja:  { slug:"granja",  label:"Granja",  h1:"Raciones y alimento para animales de granja",
+             kw:"raciones de granja",
+             titulo:"Alimento para gallinas, cerdos y vacunos",
              tipo:"Ración para animales de granja",
-             intro:"Somos los únicos avalados por el MGAP en la zona. Raciones para aves ponedoras, pollos parrilleros, vacunos, terneros, cerdos, lechones, ovinos y conejos, en bolsas de 25 kg, más suplementos proteicos y vitamínicos. Precios mayoristas para productores y comercios." },
+             intro:"Somos los únicos avalados por el MGAP en la zona. Raciones y alimento para gallinas ponedoras, pollos parrilleros, vacunos, terneros, cerdos, lechones, ovinos y conejos, en bolsas de 25 kg, más suplementos proteicos y vitamínicos. Precios mayoristas para productores y comercios." },
   granos:  { slug:"granos",  label:"Granos",  h1:"Granos e insumos a granel",
+             kw:"granos",
+             titulo:"Maíz, arroz y avena para animales a granel",
              tipo:"Grano e insumo a granel",
              intro:"Maíz entero, maíz quebrado, arroz y avena para caballos, en bolsas de 25 y 35 kg. Insumos para alimentar aves de corral, cerdos, vacunos y equinos, con entrega en tu casa o tu establecimiento." },
   cuidado: { slug:"sanidad", label:"Sanidad", h1:"Sanidad animal y control de plagas",
+             kw:"productos de sanidad",
+             titulo:"Antiparasitarios, pipetas y control de plagas",
              tipo:"Producto de sanidad animal y control de plagas",
              intro:"Antiparasitarios internos y externos, pipetas, Simparica Trio para perros de 5 a 60 kg, mata pulgas y garrapatas, venenos para hormigas y cucarachas. Consultá siempre al veterinario por la dosis según el peso del animal." },
   harina:  { slug:"harinas", label:"Harinas", h1:"Harina de trigo por bolsa y por pack",
+             kw:"harina",
+             titulo:"Harina de trigo 000, 0000 e integral por bolsa",
              tipo:"Harina de trigo",
              intro:"Harina de trigo 00, 000, 0000 e integral en bolsas de 25 kg, y packs de 12 unidades de Harina Uruguay y Primor. Precios mayoristas para panaderías, pizzerías y comercios de Minas y todo el país." }
 };
@@ -147,6 +171,10 @@ function precio(p){
   if(p.price === null || p.price === undefined) return "Consultar";
   return p.cur === "USD" ? fmtUSD(p.price) : fmtUYU(p.price);
 }
+function mayus(s){ return s.charAt(0).toUpperCase() + s.slice(1); }
+function enumerar(lista){
+  return lista.length < 2 ? lista.join("") : lista.slice(0, -1).join(", ") + " y " + lista[lista.length - 1];
+}
 function waHref(texto){
   return "https://wa.me/" + WA + "?text=" + encodeURIComponent(texto);
 }
@@ -157,6 +185,14 @@ function write(rel, html){
 }
 
 /* ── 3. Modelo enriquecido ────────────────────────────────────────── */
+/* Lo que escribe en Google quien busca este producto sin saber la marca. */
+function busquedaDe(p){
+  if(/sanitaria/i.test(p.name)) return "arena sanitaria para gatos";
+  if(p.cat === "perro") return /cachorro|baby|puppy/i.test(p.name) ? "comida para cachorros" : "comida para perros";
+  if(p.cat === "gato") return /castrad/i.test(p.name) ? "comida para gatos castrados" : "comida para gatos";
+  return null;
+}
+
 const usados = new Set();
 const items = PRODUCTS.map(function(p){
   const cat = CATS[p.cat];
@@ -179,6 +215,7 @@ const items = PRODUCTS.map(function(p){
     titulo: p.name + (p.pres ? " " + p.pres : ""),
     marca: marca ? marca.nombre : null,
     marcaSinPagina: otra ? otra.nombre : null,
+    busqueda: busquedaDe(p),
     precio: precio(p),
     desc: DESCRIPCIONES[p.id] || ""
   };
@@ -288,14 +325,14 @@ ${o.body}
     <div>
       <div class="foot-wordmark">LA BARRAQUITA</div>
       <div class="foot-tagline">Raciones balanceadas</div>
-      <p class="foot-p">Negocio familiar de Minas desde 2002. Raciones para perros, gatos y granja, granos, sanidad y harinas. Únicos avalados por el MGAP, con flota propia y envíos en el día a todo el país.</p>
+      <p class="foot-p">Negocio familiar de Minas desde 2002. Comida para perros y gatos, raciones de granja, granos, sanidad y harinas. Únicos avalados por el MGAP, con flota propia y envíos en el día a todo el país.</p>
     </div>
     <div>
       <h4>Catálogo</h4>
       <ul>
         <li><a href="/catalogo/">Todos los productos</a></li>
         ${Object.values(CATS).map(function(c){
-          return `<li><a href="/catalogo/${c.slug}/">${c.label}</a></li>`;
+          return `<li><a href="/catalogo/${c.slug}/">${c.enlace || c.label}</a></li>`;
         }).join("\n        ")}
         <li><a href="/guias/">Guías y consejos</a></li>
         <li><a href="/preguntas-frecuentes/">Preguntas frecuentes</a></li>
@@ -429,7 +466,7 @@ items.forEach(function(it){
   const familia = porFamilia[familiaDe(it.name)];
   const htmlVariantes = familia && familia.length > 1 ? bloqueVariantes(it, familia) : "";
 
-  const desc = `${it.name}${it.pres ? " de " + it.pres : ""} — ${it.precio} en La Barraquita, Minas (Lavalleja). ${it.desc || it.tipo + "."} Envío en el día a todo el país. WhatsApp ${TEL_WA}.`;
+  const desc = `${it.name}${it.pres ? " de " + it.pres : ""} — ${it.busqueda ? it.busqueda + (it.price == null ? ", " : " a ") : ""}${it.precio} en La Barraquita, Minas (Lavalleja). ${it.desc || it.tipo + "."} Envío en el día a todo el país. WhatsApp ${TEL_WA}.`;
 
   const offer = {
     "@type": "Offer",
@@ -449,7 +486,7 @@ items.forEach(function(it){
     "@id": SITE + it.url + "#producto",
     "name": it.titulo,
     "sku": it.id,
-    "category": it.cat_label,
+    "category": it.busqueda ? mayus(it.busqueda) : it.cat_label,
     "description": `${it.desc || it.tipo + "."}${it.pres ? " Presentación de " + it.pres + "." : ""} Disponible en La Barraquita, Minas, Lavalleja, con envío a todo el Uruguay.`,
     "offers": offer
   };
@@ -484,7 +521,7 @@ items.forEach(function(it){
   const body = `
 <article class="ficha wrap">
   <div class="ficha-art">
-    ${it.img ? `<img src="${it.img}" alt="${esc(it.titulo)}: ${esc(it.tipo).toLowerCase()} — La Barraquita, Minas" decoding="async">` : ""}
+    ${it.img ? `<img src="${it.img}" alt="${esc(it.titulo)}: ${esc(it.busqueda || it.tipo.toLowerCase())} — La Barraquita, Minas" decoding="async">` : ""}
   </div>
   <div class="ficha-info">
     <p class="eyebrow"><a href="/catalogo/${it.cat_slug}/">${esc(it.cat_label)}</a>${it.marca ? ` · <a href="/marcas/${slug(it.marca)}/">${esc(it.marca)}</a>` : it.marcaSinPagina ? ` · ${esc(it.marcaSinPagina)}` : ""}</p>
@@ -515,7 +552,7 @@ ${htmlTecnica}
 ${htmlFaq}
 <section class="wrap bloque">
   <h2 class="display">Dónde comprar ${esc(it.name)} en Minas</h2>
-  <p>${esc(it.tipo)}${it.pres ? ` en presentación de <b>${esc(it.pres)}</b>` : ""}. Lo retirás en <b>Intendente Lois 523, Minas (Lavalleja)</b> o te lo llevamos con flota propia en menos de 24 horas, a Minas y a todo el país. Pedidos por WhatsApp al <b>${TEL_WA}</b>.</p>
+  <p>${esc(it.busqueda ? mayus(it.busqueda) : it.tipo)}${it.pres ? ` en presentación de <b>${esc(it.pres)}</b>` : ""}. Lo retirás en <b>Intendente Lois 523, Minas (Lavalleja)</b> o te lo llevamos con flota propia en menos de 24 horas, a Minas y a todo el país. Pedidos por WhatsApp al <b>${TEL_WA}</b>.</p>
   <p><a class="link-mas" href="/preguntas-frecuentes/">Cómo comprar, envíos y formas de pago →</a></p>
 </section>
 
@@ -542,11 +579,59 @@ ${relacionados.length ? `<section class="wrap bloque">
 });
 
 /* ── 6. Páginas de categoría ──────────────────────────────────────── */
+/* Preguntas de la categoría con los precios del catálogo: responden con datos
+   de esta página las búsquedas genéricas ("comida para perros barata", "dónde
+   comprar comida para gatos en Minas"). */
+function faqCategoria(c, lista){
+  if(!c.faq) return [];
+  const preguntas = [];
+  const masBarata = function(arr){
+    return arr.filter(function(it){ return it.price != null; })
+      .sort(function(a, b){ return a.price - b.price; })[0];
+  };
+
+  /* Precio por kilo, una presentación por línea (la más conveniente). */
+  const mejor = {};
+  lista.forEach(function(it){
+    if(/sanitaria/i.test(it.name)) return;
+    const pu = precioUnitario(it);
+    if(!pu || pu.unidad !== "kilo") return;
+    const k = it.name.toLowerCase();
+    if(!mejor[k] || pu.valor < mejor[k].pu.valor) mejor[k] = { it, pu };
+  });
+  const top = Object.values(mejor).sort(function(a, b){ return a.pu.valor - b.pu.valor; }).slice(0, 3);
+  const kilo = function(x){ return money(x.pu.valor, x.it.cur) + " el kilo"; };
+  if(top.length) preguntas.push({
+    q: `¿Cuál es la ${c.kw} más barata?`,
+    a: `Mirando el precio por kilo, la más económica hoy es ${top[0].it.titulo}: ${kilo(top[0])} (${top[0].it.precio} la bolsa).` +
+       (top.length > 1 ? ` Le ${top.length > 2 ? "siguen" : "sigue"} ${enumerar(top.slice(1).map(function(x){ return x.it.titulo + " (" + kilo(x) + ")"; }))}.` : "") +
+       " Son precios de referencia: confirmá el valor del día por WhatsApp."
+  });
+
+  c.faq.forEach(function(f){
+    const cumplen = lista.filter(function(it){ return f.re.test(it.name); });
+    if(!cumplen.length) return;
+    const nombres = [...new Set(cumplen.map(function(it){ return it.name.replace(/\s*piedra sanitaria/i, ""); }))];
+    const barata = masBarata(cumplen);
+    preguntas.push({
+      q: f.q,
+      a: `Sí: ${enumerar(nombres)}. ${f.a}` + (barata ? ` Desde ${barata.precio} la bolsa (${barata.titulo}).` : "")
+    });
+  });
+
+  preguntas.push({
+    q: `¿Dónde comprar ${c.kw} en Minas?`,
+    a: `En La Barraquita, Intendente Lois 523, Minas (Lavalleja), de lunes a viernes de 8:00 a 12:30 y de 14:00 a 18:30, y los sábados de 8:00 a 13:00. También te la llevamos con flota propia: en el día en Minas y en menos de 24 horas al resto del país. Pedidos por WhatsApp al ${TEL_WA}.`
+  });
+  return preguntas;
+}
+
 Object.keys(CATS).forEach(function(key){
   const c = CATS[key];
   const lista = porCat[key] || [];
   const crumbs = [ { n:"Inicio", u:"/" }, { n:"Catálogo", u:"/catalogo/" }, { n:c.label, u:"/catalogo/" + c.slug + "/" } ];
   const marcasCat = marcas.filter(function(m){ return m.items.some(function(i){ return i.cat === key; }); });
+  const preguntas = faqCategoria(c, lista);
 
   const body = `
 <section class="wrap encabezado">
@@ -563,15 +648,16 @@ Object.keys(CATS).forEach(function(key){
   </ul>
 </section>
 
+${bloqueFaq(preguntas, c.kw)}
 <section class="wrap bloque">
   <h2 class="display">Envíos y formas de pago</h2>
-  <p>Llevamos tu pedido de ${esc(c.label.toLowerCase())} <b>en el día</b> a Minas y a todo el Uruguay con flota propia. Vendemos <b>por mayor y por menor</b> y aceptamos efectivo, transferencias bancarias y todas las tarjetas de crédito y débito.</p>
-  <p>Escribinos al WhatsApp <a href="${waHref("Hola La Barraquita! Quiero consultar por " + c.label.toLowerCase() + ".")}" target="_blank" rel="noopener"><b>${TEL_WA}</b></a> o pasá por Intendente Lois 523, Minas, Lavalleja.</p>
+  <p>Llevamos tu pedido de ${esc(c.kw)} <b>en el día</b> a Minas y a todo el Uruguay con flota propia. Vendemos <b>por mayor y por menor</b> y aceptamos efectivo, transferencias bancarias y todas las tarjetas de crédito y débito.</p>
+  <p>Escribinos al WhatsApp <a href="${waHref("Hola La Barraquita! Quiero consultar por " + c.kw + ".")}" target="_blank" rel="noopener"><b>${TEL_WA}</b></a> o pasá por Intendente Lois 523, Minas, Lavalleja.</p>
 </section>
 `;
 
   write("catalogo/" + c.slug + "/index.html", layout({
-    title: `${c.label}: ${lista.length} productos con precio | La Barraquita`,
+    title: `${c.titulo.replace("{n}", lista.length)} | La Barraquita`,
     ogTitle: `${c.h1} — La Barraquita`,
     desc: `${c.h1} en La Barraquita, Minas (Lavalleja). ${lista.length} productos con precio, envío en el día a todo el país, por mayor y por menor. WhatsApp ${TEL_WA}.`,
     url: "/catalogo/" + c.slug + "/",
@@ -591,8 +677,9 @@ Object.keys(CATS).forEach(function(key){
           })
         }
       },
+      faqLD(preguntas),
       breadcrumbLD(crumbs)
-    ] },
+    ].filter(Boolean) },
     body: body
   }));
 });
@@ -604,7 +691,7 @@ Object.keys(CATS).forEach(function(key){
 <section class="wrap encabezado">
   <p class="eyebrow">Catálogo completo</p>
   <h1 class="display">Todos nuestros productos, con precio</h1>
-  <p class="lead">${items.length} productos entre raciones para perros y gatos, alimento de granja, granos, sanidad animal y harinas. Somos La Barraquita, un negocio familiar de Minas (Lavalleja) desde 2002, los únicos avalados por el MGAP en la zona, con envío en el día a todo el Uruguay y venta por mayor y por menor.</p>
+  <p class="lead">${items.length} productos entre comida para perros y gatos, raciones de granja, granos, sanidad animal y harinas. Somos La Barraquita, un negocio familiar de Minas (Lavalleja) desde 2002, los únicos avalados por el MGAP en la zona, con envío en el día a todo el Uruguay y venta por mayor y por menor.</p>
   <p class="chips">${Object.values(CATS).map(function(c){ return `<a href="/catalogo/${c.slug}/">${c.label}</a>`; }).join(" ")}</p>
 </section>
 ${Object.keys(CATS).map(function(key){
@@ -619,9 +706,9 @@ ${Object.keys(CATS).map(function(key){
 }).join("\n")}
 `;
   write("catalogo/index.html", layout({
-    title: `Catálogo de raciones y alimento balanceado | La Barraquita`,
+    title: `Catálogo: comida para perros, gatos y granja | La Barraquita`,
     ogTitle: "Catálogo completo con precios — La Barraquita",
-    desc: `Catálogo completo de La Barraquita: ${items.length} productos con precio — raciones para perros y gatos, granja, granos, sanidad y harinas. Minas, Lavalleja. Envío en el día a todo el país. WhatsApp ${TEL_WA}.`,
+    desc: `Catálogo completo de La Barraquita: ${items.length} productos con precio — comida para perros y gatos, raciones de granja, granos, sanidad y harinas. Minas, Lavalleja. Envío en el día a todo el país. WhatsApp ${TEL_WA}.`,
     url: "/catalogo/",
     crumbs: crumbs,
     jsonld: { "@context":"https://schema.org", "@graph":[
@@ -649,12 +736,17 @@ ${Object.keys(CATS).map(function(key){
 marcas.forEach(function(m){
   const crumbs = [ { n:"Inicio", u:"/" }, { n:"Catálogo", u:"/catalogo/" }, { n:m.nombre, u:m.url } ];
   const cats = [...new Set(m.items.map(function(i){ return i.cat_label; }))];
+  const piedras = m.items.some(function(i){ return /sanitaria/i.test(i.name); });
+  const comida = m.items.filter(function(i){ return !/sanitaria/i.test(i.name); });
+  const conPerro = comida.some(function(i){ return i.cat === "perro"; });
+  const conGato = comida.some(function(i){ return i.cat === "gato"; });
+  const kw = conPerro && conGato ? "comida para perros y gatos" : conPerro ? "comida para perros" : conGato ? "comida para gatos" : null;
   const body = `
 <section class="wrap encabezado">
   <p class="eyebrow">Marca</p>
   <h1 class="display">${esc(m.nombre)} en Minas y todo Uruguay</h1>
   <p class="lead">${esc(m.desc)}</p>
-  <p class="lead">Todas las presentaciones de <b>${esc(m.nombre)}</b> que tenemos en stock, con precio actualizado. ${cats.length === 1 ? "Línea de " + cats[0].toLowerCase() + "." : "Líneas de " + cats.join(" y ").toLowerCase() + "."} Comprala en La Barraquita, Intendente Lois 523, Minas (Lavalleja), con envío en el día a todo el país y venta por mayor y por menor.</p>
+  <p class="lead">Todas las presentaciones de <b>${esc(m.nombre)}</b> que tenemos en stock, con precio actualizado${kw ? ": " + esc(kw) + (piedras ? ", más piedras sanitarias" : "") + "." : ". " + (cats.length === 1 ? "Línea de " + cats[0].toLowerCase() + "." : "Líneas de " + cats.join(" y ").toLowerCase() + ".")} Comprala en La Barraquita, Intendente Lois 523, Minas (Lavalleja), con envío en el día a todo el país y venta por mayor y por menor.</p>
   <p class="conteo">${m.items.length} presentaciones disponibles</p>
 </section>
 
@@ -673,7 +765,7 @@ marcas.forEach(function(m){
   write("marcas/" + m.slug + "/index.html", layout({
     title: `${m.nombre}: precios y presentaciones | La Barraquita`,
     ogTitle: `${m.nombre} — precios en La Barraquita`,
-    desc: `${m.nombre} en La Barraquita, Minas (Lavalleja): ${m.items.length} presentaciones con precio actualizado. Envío en el día a todo el Uruguay, por mayor y por menor. WhatsApp ${TEL_WA}.`,
+    desc: `${kw ? mayus(kw) + " " : ""}${m.nombre} en La Barraquita, Minas (Lavalleja): ${m.items.length} presentaciones con precio actualizado. Envío en el día a todo el Uruguay, por mayor y por menor. WhatsApp ${TEL_WA}.`,
     url: m.url,
     crumbs: crumbs,
     jsonld: { "@context":"https://schema.org", "@graph":[
