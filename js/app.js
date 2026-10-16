@@ -136,6 +136,16 @@
   }
   var PLUS = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>';
 
+  /* ── Google Analytics (js/analytics.js): si no cargó, no se mide nada ── */
+  function ga(nombre, params){ if(window.lbTrack) window.lbTrack(nombre, params); }
+  function gaEco(lineas){
+    if(!window.lbEcommerce) return {};
+    return window.lbEcommerce(lineas.map(function(l){
+      var p = l[0];
+      return [{ id:p.id, name:p.name, pres:p.pres, cat:catLabel[p.cat], price:p.price, cur:p.cur }, l[1]];
+    }));
+  }
+
   var cart = {};
   function cartCount(){ var n=0; for(var k in cart){ n += cart[k]; } return n; }
   function cartTotals(){ var t={UYU:0,USD:0}; for(var k in cart){ var p=byId[k]; if(p.price!==null&&p.price!==undefined){ t[p.cur]+=cart[k]*p.price; } } return t; }
@@ -512,7 +522,12 @@
     fab.classList.toggle("has", n > 0);
     renderDrawer();
   }
-  function addToCart(id, qty){ cart[id] = (cart[id] || 0) + (qty || 1); updateCart(); }
+  function addToCart(id, qty){
+    cart[id] = (cart[id] || 0) + (qty || 1);
+    updateCart();
+    ga("add_to_cart", gaEco([[byId[id], qty || 1]]));
+  }
+  function cartLineas(){ return Object.keys(cart).map(function(id){ return [byId[id], cart[id]]; }); }
 
   function renderDrawer(){
     var ids = Object.keys(cart);
@@ -543,6 +558,9 @@
     }).join("");
     drawerTotal.textContent = totalsText();
     checkout.href = checkoutLink();
+    // Valor del pedido para el evento whatsapp_click del carrito (js/analytics.js)
+    var eco = gaEco(cartLineas());
+    if(eco.currency){ checkout.dataset.gaValue = eco.value; checkout.dataset.gaCurrency = eco.currency; }
   }
 
   function checkoutLink(){
@@ -563,6 +581,8 @@
     else if(dec){ var id = dec.getAttribute("data-dec"); cart[id]--; if(cart[id] <= 0){ delete cart[id]; } updateCart(); }
     else if(rm){ delete cart[rm.getAttribute("data-rm")]; updateCart(); }
   });
+
+  checkout.addEventListener("click", function(){ ga("begin_checkout", gaEco(cartLineas())); });
 
   fab.addEventListener("click", function(){ openOverlay(cartOverlay); });
 
@@ -594,6 +614,10 @@
       '</div>' +
       '<a class="m-single" target="_blank" rel="noopener" href="' + waLink(p) + '">o pedir solo este por WhatsApp →</a>' +
       (RUTAS[p.id] ? '<a class="m-ficha" href="' + RUTAS[p.id] + '">Ver ficha completa para compartir →</a>' : '');
+    var eco = gaEco([[p, 1]]);
+    var single = modalBody.querySelector(".m-single");
+    if(single && eco.currency){ single.dataset.gaValue = eco.value; single.dataset.gaCurrency = eco.currency; }
+    ga("view_item", eco);
     openOverlay(modalOverlay);
   }
 
@@ -665,6 +689,10 @@
       s.href = waOferta(o);
       s.target = "_blank"; s.rel = "noopener";
       s.setAttribute("aria-label", "Pedir por WhatsApp: " + o.alt);
+      // Para el evento select_promotion de js/analytics.js
+      s.dataset.oferta = o.msg || o.alt;
+      s.dataset.ofertaImg = o.img.split("/").pop();
+      s.dataset.ofertaPos = String(i + 1);
       var inner = document.createElement("div"); inner.className = "slide-in";
       // Fondo difuminado con la misma foto para rellenar las bandas (imágenes que no son 3:4).
       // URL absoluta: el var() se consume en el CSS (carpeta css/), una ruta relativa se resolvería mal.

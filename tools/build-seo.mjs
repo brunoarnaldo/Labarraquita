@@ -247,6 +247,8 @@ function layout(o){
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Libre+Franklin:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/pagina.css">
+<!-- Google Analytics 4 + banner de cookies (el Measurement ID está en js/analytics.js) -->
+<script src="/js/analytics.js"></script>
 <script type="application/ld+json">
 ${JSON.stringify(o.jsonld, null, 2)}
 </script>
@@ -316,13 +318,13 @@ ${o.body}
       <h4 class="mt">Horarios</h4>
       <p class="foot-p">Lunes a viernes 8:00–12:30 y 14:00–18:30<br>Sábados 8:00–13:00</p>
       <h4 class="mt">Contacto</h4>
-      <p class="foot-p">WhatsApp ${TEL_WA}<br>Teléfono 4442 4021</p>
+      <p class="foot-p">WhatsApp ${TEL_WA}<br>Teléfono <a href="tel:+59844424021">4442 4021</a></p>
     </div>
   </div>
   <div class="foot-bottom">
     <div class="wrap">
       <p>Los precios pueden variar; confirmá stock y valores al hacer tu pedido. Productos de granja y harinas expresados en dólares.</p>
-      <span>© ${new Date().getFullYear()} La Barraquita · Minas, Lavalleja</span>
+      <span>© ${new Date().getFullYear()} La Barraquita · Minas, Lavalleja · <a href="#" data-cookie-prefs>Cookies</a></span>
     </div>
   </div>
 </footer>
@@ -390,6 +392,18 @@ function faqLD(preguntas){
       return { "@type":"Question", "name": p.q, "acceptedAnswer": { "@type":"Answer", "text": p.a } };
     })
   };
+}
+
+/* Datos del producto para el evento view_item de GA4 (js/analytics.js) */
+function gaItemAttrs(it){
+  const d = {
+    "item-id": it.id, "item-name": it.name, "item-variant": it.pres,
+    "item-category": it.cat_label, "item-brand": it.marca || it.marcaSinPagina,
+    "item-price": it.price, "item-currency": it.cur
+  };
+  return Object.keys(d)
+    .filter(function(k){ return d[k] !== null && d[k] !== undefined && d[k] !== ""; })
+    .map(function(k){ return `data-${k}="${esc(d[k])}"`; }).join(" ");
 }
 
 /* Tarjeta de producto reutilizable en índices */
@@ -482,7 +496,7 @@ items.forEach(function(it){
   }
 
   const body = `
-<article class="ficha wrap">
+<article class="ficha wrap" ${gaItemAttrs(it)}>
   <div class="ficha-art">
     ${it.img ? `<img src="${it.img}" alt="${esc(it.titulo)}: ${esc(it.tipo).toLowerCase()} — La Barraquita, Minas" decoding="async">` : ""}
   </div>
