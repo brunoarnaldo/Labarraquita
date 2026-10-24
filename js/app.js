@@ -4,12 +4,29 @@
   var WA = "59892109806";
   /* ── Ofertas del mes ──
      Cada oferta es un slide del carrusel y se toca para pedirla por WhatsApp.
-     Para cambiar las promos del mes: reemplazar las imágenes (3:4, 1200 × 1600) y el texto de "msg". */
+     Para cambiar las promos del mes: reemplazar las imágenes y el texto de "msg".
+     Todas las placas van en la misma proporción que el recuadro del carrusel (825 × 1024,
+     ver .slide-in en styles.css): si llegan en otra, cambiar ahí el aspect-ratio o quedan con franjas. */
   var OFERTAS = [
     {
       img: "img/ofertas/frost-razas-grandes-colchoneta.jpg",
       alt: "Frost Razas Grandes 15 kg + 2 kg de regalo + colchoneta de regalo a $ 3192",
       msg: "Frost Razas Grandes — 15 kg + 2 kg de regalo + colchoneta de regalo por $ 3192"
+    },
+    {
+      img: "img/ofertas/golden-formula-razas-pequenas-3kg.jpg",
+      alt: "Oferta Golden Formula perros adultos razas pequeñas: 10,1 kg + 3 kg de regalo",
+      msg: "Golden Formula Razas Pequeñas — 10,1 kg + 3 kg de regalo"
+    },
+    {
+      img: "img/ofertas/premier-formula-20kg-set-parrillero.jpg",
+      alt: "Oferta Premier Formula perros adultos razas medianas 20 kg + set parrillero de regalo",
+      msg: "Premier Formula Razas Medianas — 20 kg + set parrillero de regalo"
+    },
+    {
+      img: "img/ofertas/golden-seleccion-natural-cachorros.jpg",
+      alt: "Golden Selección Natural para cachorros, pollo y arroz, 10,1 kg",
+      msg: "Golden Selección Natural Cachorros pollo y arroz — 10,1 kg"
     },
     {
       img: "img/ofertas/rex-7kg-5-bolsas.jpg",
@@ -694,7 +711,7 @@
       s.dataset.ofertaImg = o.img.split("/").pop();
       s.dataset.ofertaPos = String(i + 1);
       var inner = document.createElement("div"); inner.className = "slide-in";
-      // Fondo difuminado con la misma foto para rellenar las bandas (imágenes que no son 3:4).
+      // Fondo difuminado con la misma foto para rellenar las bandas (placas de otra proporción que el recuadro).
       // URL absoluta: el var() se consume en el CSS (carpeta css/), una ruta relativa se resolvería mal.
       var bgUrl = new URL(o.img, document.baseURI).href;
       inner.style.setProperty("--bg", 'url("' + bgUrl.replace(/"/g, "%22") + '")');
