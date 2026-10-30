@@ -428,7 +428,11 @@ items.forEach(function(it){
     { n:it.titulo, u:it.url }
   ];
   const pedido = `Hola La Barraquita! Quiero pedir: ${it.name}${it.pres ? " (" + it.pres + ")" : ""}${it.promo ? " con la promo: " + (it.flag || "regalo").toLowerCase() : ""}. ¿Está disponible?`;
-  const relacionados = porCat[it.cat].filter(function(o){ return o.id !== it.id; }).slice(0, 8);
+  /* Los 8 que siguen en la categoría, en círculo: así cada ficha recibe enlaces
+     de otras 8 y no se concentran todos en las primeras de la lista. */
+  const lista = porCat[it.cat];
+  const pos = lista.indexOf(it);
+  const relacionados = lista.slice(pos + 1).concat(lista.slice(0, pos)).slice(0, 8);
 
   /* Contenido propio de esta ficha: precio por kilo, rendimiento, análisis
      garantizado y preguntas, todo derivado de los datos del producto. */
