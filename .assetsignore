@@ -23,3 +23,6 @@ img/*
 
 # Generador de páginas SEO (solo se corre en local)
 tools
+
+# Piezas para redes sociales: se guardan en el repo pero no son parte del sitio
+halloween
