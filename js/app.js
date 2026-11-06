@@ -9,59 +9,34 @@
      ver .slide-in en styles.css): si llegan en otra, cambiar ahí el aspect-ratio o quedan con franjas. */
   var OFERTAS = [
     {
-      img: "img/ofertas/frost-razas-grandes-colchoneta.jpg",
-      alt: "Frost Razas Grandes 15 kg + 2 kg de regalo + colchoneta de regalo a $ 3192",
-      msg: "Frost Razas Grandes — 15 kg + 2 kg de regalo + colchoneta de regalo por $ 3192"
+      img: "img/ofertas/gran-plus-vaso-termico.jpg",
+      alt: "Promo Gran Plus: comprando Gran Plus perro de 15 o 20 kg, vaso térmico de regalo. Hasta agotar stock",
+      msg: "Gran Plus perro 15 o 20 kg — vaso térmico de regalo"
     },
     {
-      img: "img/ofertas/golden-formula-razas-pequenas-3kg.jpg",
-      alt: "Oferta Golden Formula perros adultos razas pequeñas: 10,1 kg + 3 kg de regalo",
-      msg: "Golden Formula Razas Pequeñas — 10,1 kg + 3 kg de regalo"
+      img: "img/ofertas/natural-cat-castrados-7kg.jpg",
+      alt: "Natural Cat Adultos para gatos castrados: 7 kg a $ 950",
+      msg: "Natural Cat Adultos gatos castrados — 7 kg por $ 950"
     },
     {
-      img: "img/ofertas/premier-formula-20kg-set-parrillero.jpg",
-      alt: "Oferta Premier Formula perros adultos razas medianas 20 kg + set parrillero de regalo",
-      msg: "Premier Formula Razas Medianas — 20 kg + set parrillero de regalo"
+      img: "img/ofertas/simparica-trio.jpg",
+      alt: "Simparica Trio, protección total contra pulgas, garrapatas y parásitos internos: 5-10 kg, 10-20 kg, 20-40 kg y 40-60 kg",
+      msg: "Simparica Trio (pulgas, garrapatas y parásitos internos)"
     },
     {
-      img: "img/ofertas/golden-seleccion-natural-cachorros.jpg",
-      alt: "Golden Selección Natural para cachorros, pollo y arroz, 10,1 kg",
-      msg: "Golden Selección Natural Cachorros pollo y arroz — 10,1 kg"
+      img: "img/ofertas/cidar-60-dias.jpg",
+      alt: "Cidar comprimido masticable: 60 días de protección para perros y gatos",
+      msg: "Cidar comprimido masticable — 60 días de protección"
     },
     {
-      img: "img/ofertas/rex-7kg-5-bolsas.jpg",
-      alt: "Oferta Rex Adultos 7 kg: llevando 5 bolsas, cada una te queda a $ 332",
-      msg: "Rex Adultos 7 kg — 5 bolsas a $ 332 cada una"
+      img: "img/ofertas/pipetas-dominal.jpg",
+      alt: "Pipetas Dominal: mata pulgas y garrapatas y repele mosquitos, para perros y gatos",
+      msg: "Pipetas Dominal (pulgas, garrapatas y mosquitos)"
     },
     {
-      img: "img/ofertas/bravo-light-15-2.jpg",
-      alt: "Oferta Bravo Light pollo y verduras para perros adultos: 15 kg + 2 kg de regalo a $ 1600",
-      msg: "Bravo Light pollo y verduras — 15 kg + 2 kg de regalo por $ 1600"
-    },
-    {
-      img: "img/ofertas/raval-alta-competencia-jornada.jpg",
-      alt: "Raval Alta Competencia 25 kg: ración para equinos de competencia y de andar",
-      msg: "Raval Alta Competencia para equinos — 25 kg"
-    },
-    {
-      img: "img/ofertas/raval-alta-competencia-energia.jpg",
-      alt: "Raval Alta Competencia 25 kg: energía para equinos de competencia y de andar",
-      msg: "Raval Alta Competencia para equinos — 25 kg"
-    },
-    {
-      img: "img/ofertas/zafra-cerdos.jpg",
-      alt: "Comenzó la zafra de cerdos: raciones Raval y Racionísima de 25 kg para cerdas madres, lechones y engorde",
-      msg: "Raciones para cerdos (Raval / Racionísima 25 kg) — cerdas madres, lechones o engorde"
-    },
-    {
-      img: "img/ofertas/zafra-cerdos-2.jpg",
-      alt: "Zafra de cerdos: amplia variedad de raciones Raval y Racionísima para cada etapa",
-      msg: "Raciones para cerdos (Raval / Racionísima 25 kg) — cerdas madres, lechones o engorde"
-    },
-    {
-      img: "img/ofertas/criolla-7kg-comerciantes.jpg",
-      alt: "Atención comerciantes: con la compra de 10 bolsas de Criolla 7 kg, cada una te queda a $ 305",
-      msg: "Criolla Adultos 7 kg — 10 bolsas a $ 305 cada una (precio comerciantes)"
+      img: "img/ofertas/collar-dominal.jpg",
+      alt: "Chau pulgas: collar antipulgas y garrapatas Dominal para perros y gatos",
+      msg: "Collar antipulgas y garrapatas Dominal"
     }
   ];
 
