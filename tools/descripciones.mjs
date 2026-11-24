@@ -27,6 +27,7 @@ export default {
   g18: "Piedra sanitaria absorbente en bolsa grande de 6 kg, rinde más y reduce el olor de la bandeja.",
   g19: "Ración premium de PremieRpet para gatos castrados, sabor pollo, con ingredientes naturales y cuidado del tracto urinario.",
   g20: "Ración súper premium para gatos castrados de 6 meses a 6 años que viven en ambientes internos, sabor pollo.",
+  g21: "Ración Nativa Premium Especial de Raval para gatos adultos castrados, con ingredientes naturales, control de peso, cuidado urinario y control de bolas de pelo.",
 
   /* ── Perros ── */
   p01: "Ración para perros adultos de todas las razas, alimento completo y balanceado para el día a día.",
@@ -83,6 +84,10 @@ export default {
   p51: "Ración premium para perros adultos de 7 años o más, sabor pollo, arroz y vegetales, con cuidado oral y articular, con balde de regalo.",
   p52: "Ración argentina para perros adultos de razas medianas y grandes, con 21 % de proteínas, omega 3, 6 y 9, vitaminas y minerales.",
   p53: "Ración de alto rendimiento para perros adultos, con 23 % de proteínas, omega 3, 6 y 9 y protección inmunológica.",
+  p55: "Ración Nativa Premium Especial de Raval para perros adultos de todos los tamaños, con ingredientes naturales, proteínas de alta calidad, protección articular y omega 3 (DHA) y 6.",
+  p56: "Ración Nativa Premium Especial de Raval para cachorros de todas las razas, con omega 3 (DHA) y 6, proteína de alta calidad y fórmula para una digestión saludable.",
+  p57: "Ración Nativa Premium Especial de Raval para perros adultos de razas pequeñas, con proteínas de alta calidad, cuidado de la salud bucal y heces firmes con menos olor.",
+  p58: "Ración Nativa Premium Especial de Raval para perros senior o con sobrepeso, de todas las razas, con protección articular, control de peso y cuidado cardiovascular.",
 
   /* ── Granja ── */
   f01: "Ración granulada para gallinas ponedoras en su primera fase de postura, formulada para sostener la producción de huevos.",

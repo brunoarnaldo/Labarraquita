@@ -88,6 +88,8 @@ const MARCAS = [
     desc:"Macanudo es una ración económica para perros y gatos adultos, en bolsas chicas de 5 y 7 kg, práctica para un solo animal." },
   { nombre:"Golden", re:/^golden\b/i,
     desc:"Golden es la línea de PremieRpet, con fórmulas de ingredientes naturales para perros adultos (Special), perros de 7 años o más (Senior) y gatos castrados. Es una ración premium brasileña de croqueta bien aceptada, que en las presentaciones grandes suele venir con balde de regalo." },
+  { nombre:"Nativa", re:/^nativa\b/i,
+    desc:"Nativa Premium Especial es la línea nueva de Raval, hecha con ingredientes naturales y sin colorantes ni aromatizantes artificiales. Tiene fórmulas para cachorros, adultos de todas las razas, adultos de razas pequeñas, perros senior o con sobrepeso (Senior & Light) y gatos adultos castrados, todas en bolsa de 7,5 kg." },
   { nombre:"Simparica", re:/^simparica\b/i,
     desc:"Simparica Trio es el antiparasitario mensual de Zoetis en comprimido masticable: protege contra pulgas, garrapatas, gusano del corazón y parásitos intestinales en una sola toma. Viene en cuatro presentaciones según el peso del perro, de 5 a 60 kg. Consultá con tu veterinario la dosis correcta." }
 ];
